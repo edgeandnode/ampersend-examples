@@ -4,9 +4,7 @@ Demonstrates using Ampersend with the standard x402 fetch wrapper for HTTP API p
 
 ## Overview
 
-This example shows how to add Ampersend payment authorization to x402-protected HTTP APIs. It uses the same `@x402/fetch` wrapper as the official x402 SDK, with minimal additions for Ampersend integration.
-
-**Compare with the [official x402-v2 fetch example](https://github.com/coinbase/x402/tree/main/examples/typescript/clients/fetch) to see the minimal setup difference.**
+This example shows how to add Ampersend payment authorization to x402-protected HTTP APIs. It uses the `AmpersendTreasurer` for spend limits and payment monitoring via the Ampersend API.
 
 ## Installation
 
@@ -21,43 +19,17 @@ pnpm install
 
 ## Usage
 
-Set your private key and run:
+Set your environment variables and run:
 
 ```bash
-PRIVATE_KEY=0x... pnpm dev
+# Copy .env.example to .env at the repo root and fill in:
+# TS__EXAMPLES__X402_HTTP_CLIENT__SMART_ACCOUNT_ADDRESS=0x...
+# TS__EXAMPLES__X402_HTTP_CLIENT__SESSION_KEY=0x...
+
+pnpm dev
 ```
 
-## How It Works
-
-The example demonstrates the core Ampersend pattern for HTTP payments:
-
-```typescript
-import { x402Client, wrapFetchWithPayment } from "@x402/fetch"
-import { AccountWallet, NaiveTreasurer } from "@ampersend_ai/ampersend-sdk"
-import { wrapWithAmpersend } from "@ampersend_ai/ampersend-sdk/x402"
-
-// --- Standard x402 setup (same as official example) ---
-const client = new x402Client()
-
-// --- Ampersend additions (replaces registerExactEvmScheme) ---
-const wallet = AccountWallet.fromPrivateKey(privateKey)
-const treasurer = new NaiveTreasurer(wallet)  // Decides whether to pay
-wrapWithAmpersend(client, treasurer, ["base", "base-sepolia"])
-
-// --- Use it (identical to official example) ---
-const fetchWithPayment = wrapFetchWithPayment(fetch, client)
-const response = await fetchWithPayment("https://paid-api.example.com/resource")
-```
-
-## Comparison with x402-v2
-
-| x402-v2 Official | Ampersend | Purpose |
-|------------------|-----------|---------|
-| `privateKeyToAccount(key)` | `AccountWallet.fromPrivateKey(key)` | Wallet creation |
-| `registerExactEvmScheme(client, { signer })` | `wrapWithAmpersend(client, treasurer, networks)` | Payment registration |
-| - | `new NaiveTreasurer(wallet)` | Payment authorization |
-
-The key difference: Ampersend uses a **Treasurer** pattern that allows sophisticated payment policies (budgets, approvals, limits) instead of auto-signing everything.
+Get your smart account address and session key from the Ampersend dashboard.
 
 ## Development
 
@@ -77,6 +49,5 @@ src/
 
 ## Learn More
 
-- [HTTP x402 Adapter Documentation](https://github.com/edgeandnode/ampersend-sdk/tree/main/typescript/packages/ampersend-sdk/src/x402/http)
 - [Ampersend SDK Documentation](https://github.com/edgeandnode/ampersend-sdk)
 - [x402 Protocol](https://github.com/coinbase/x402)
