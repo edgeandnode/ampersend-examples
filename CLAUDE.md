@@ -28,6 +28,9 @@ uv --directory=python/examples run -- adk web src/examples/a2a/buyer
 
 # Run A2A seller server
 uv --directory=python/examples run -- uvicorn examples.a2a.seller.adk.agent:a2a_app --host localhost --port 8001
+
+# Run LangChain A2A buyer
+uv --directory=python/examples run python -m examples.a2a.buyer.langchain.agent
 ```
 
 ### TypeScript Examples
@@ -56,6 +59,7 @@ Multi-language monorepo demonstrating x402 payment integration with AI agents:
 
 - `a2a/buyer/adk/` - Direct A2A agent with x402 payments (uses `X402RemoteA2aAgent`)
 - `a2a/buyer/local_agent/` - Local orchestrator managing multiple remote agents (uses `X402RemoteAgentToolset`)
+- `a2a/buyer/langchain/` - LangChain/LangGraph agent with x402 payments (uses `langchain-ampersend` A2AToolkit)
 - `a2a/seller/adk/` - x402-enabled A2A service provider
 - `mcp/buyer/adk/` - MCP client via payment proxy (uses `McpToolset`)
 
