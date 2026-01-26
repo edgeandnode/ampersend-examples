@@ -17,11 +17,11 @@
     "@ampersend_ai/ampersend-sdk": "^0.0.1",
     "fastmcp": "github:edgeandnode/fastmcp#6446ea7b56eb291a6d4d7321e4a41ff0aacba1ef",
     "@modelcontextprotocol/sdk": "github:edgeandnode/mcp-typescript-sdk#2de06543904483073d8cc13db1d0e08e16601081",
-    "@langchain/core": "^0.3.29",
+    "@langchain/core": "^1.0.0",
     "@langchain/openai": "^1.0.0",
-    "@langchain/langgraph": "^0.2.30",
+    "@langchain/langgraph": "^1.0.0",
     "@langchain/mcp-adapters": "^1.0.0",
-    "langchain": "^0.3.9",
+    "langchain": "^1.0.0",
     "viem": "^2.43.3"
   },
   "devDependencies": {
