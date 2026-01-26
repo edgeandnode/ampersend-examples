@@ -1,30 +1,52 @@
 # LangChain + x402 MCP Example
 
-Simple example showing how to use LangChain agents with x402-enabled MCP tools.
+Example showing how to use LangChain agents with x402-enabled MCP servers and Ampersend smart accounts for payment authorization with spend limits.
 
 ## Prerequisites
 
-- Running x402-enabled MCP server
 - OpenAI API key
-- Wallet with funds for payments
+- Ampersend agent account (smart account + session key)
 
-## Setup
+## Getting Started (Testnet)
 
-Install dependencies:
-
-```bash
-pnpm install
-```
+1. **Create agent account** at https://app.staging.ampersend.ai
+2. **Fund with testnet USDC**: https://faucet.circle.com/ (Base Sepolia)
+3. **Set environment variables**:
+   ```bash
+   export TS__EXAMPLES__LANGCHAIN_MCP__SMART_ACCOUNT_ADDRESS=0x...  # From dashboard
+   export TS__EXAMPLES__LANGCHAIN_MCP__SESSION_KEY_PRIVATE_KEY=0x...  # From dashboard
+   export OPENAI_API_KEY=...
+   ```
+4. **Install dependencies**:
+   ```bash
+   pnpm install
+   ```
+5. **Run**:
+   ```bash
+   pnpm dev
+   ```
 
 ## Environment Variables
 
-- `TS__EXAMPLES__LANGCHAIN_MCP__MCP_SERVER_URL`: Your MCP server URL
-- `TS__EXAMPLES__LANGCHAIN_MCP__PRIVATE_KEY`: Wallet private key (must start with `0x`)
-- `OPENAI_API_KEY`: Your OpenAI API key
+### Required
+
+| Variable                                               | Description                                        |
+| ------------------------------------------------------ | -------------------------------------------------- |
+| `TS__EXAMPLES__LANGCHAIN_MCP__SMART_ACCOUNT_ADDRESS`   | Smart account address (from Ampersend dashboard)   |
+| `TS__EXAMPLES__LANGCHAIN_MCP__SESSION_KEY_PRIVATE_KEY` | Session key private key (from Ampersend dashboard) |
+| `OPENAI_API_KEY`                                       | Your OpenAI API key                                |
+
+### Optional (have defaults)
+
+| Variable                                         | Default                                              | Description             |
+| ------------------------------------------------ | ---------------------------------------------------- | ----------------------- |
+| `TS__EXAMPLES__LANGCHAIN_MCP__MCP_SERVER_URL`    | `https://subgraph-mcp.x402.staging.thegraph.com/mcp` | MCP server URL          |
+| `TS__EXAMPLES__LANGCHAIN_MCP__AMPERSEND_API_URL` | `https://api.staging.ampersend.ai`                   | Ampersend API URL       |
+| `TS__EXAMPLES__LANGCHAIN_MCP__CHAIN_ID`          | `84532`                                              | Chain ID (Base Sepolia) |
 
 ## Run
 
-Run with default demo query:
+Run with default query (asks about Uniswap subgraphs):
 
 ```bash
 pnpm dev
@@ -33,16 +55,15 @@ pnpm dev
 Or provide your own query:
 
 ```bash
-pnpm dev "What is 42 plus 17?"
-pnpm dev "Add 100 and 200"
-pnpm dev "Echo hello world"
+pnpm dev "What subgraphs are available?"
+pnpm dev "Query the Uniswap v3 subgraph for recent swaps"
 ```
 
-## How it works
+## How it Works
 
-1. Creates `AccountWallet` from private key
-2. Uses `NaiveTreasurer` to auto-approve payments
-3. Connects `X402 Client` to MCP server
+1. Creates `AmpersendTreasurer` with smart account wallet configuration
+2. Connects to Ampersend API for payment authorization with spend limits
+3. Connects X402 MCP Client to the Subgraph MCP server
 4. Loads MCP tools into LangChain with `loadMcpTools()`
-5. Creates LangChain agent with OpenAI
-6. Agent automatically handles x402 payments when calling tools
+5. Creates LangChain ReAct agent with OpenAI (gpt-4o-mini)
+6. Agent automatically handles x402 payments when calling tools (authorized via Ampersend)
