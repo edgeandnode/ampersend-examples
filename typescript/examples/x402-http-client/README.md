@@ -1,10 +1,10 @@
 # x402 HTTP Client Example
 
-Demonstrates using Ampersend with the standard x402 fetch wrapper for HTTP API payments.
+Demonstrates using ampersend with the standard x402 fetch wrapper for HTTP API payments.
 
 ## Overview
 
-This example shows how to add Ampersend payment authorization to x402-protected HTTP APIs. It uses `createAmpersendHttpClient()` with spend limits and payment monitoring via the Ampersend API.
+This example shows how to add ampersend payment authorization to x402-protected HTTP APIs. It uses `createampersendHttpClient()` with spend limits and payment monitoring via the ampersend API.
 
 ## Installation
 
@@ -29,7 +29,7 @@ Set your environment variables and run:
 pnpm dev
 ```
 
-Get your smart account address and session key from the Ampersend dashboard.
+Get your smart account address and session key from the ampersend dashboard.
 
 ## Development
 
@@ -49,5 +49,5 @@ src/
 
 ## Learn More
 
-- [Ampersend SDK Documentation](https://github.com/edgeandnode/ampersend-sdk)
+- [ampersend SDK Documentation](https://github.com/edgeandnode/ampersend-sdk)
 - [x402 Protocol](https://github.com/coinbase/x402)

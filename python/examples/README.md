@@ -93,7 +93,7 @@ uv --directory=python/examples run -- adk web src/examples/a2a/buyer
 
 **Features**:
 
-- Smart Account with spend limits via Ampersend
+- Smart Account with spend limits via ampersend
 - Defaults to staging subgraph service
 
 ### 2. A2A Local Orchestrator

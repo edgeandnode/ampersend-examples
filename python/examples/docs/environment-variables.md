@@ -1,10 +1,10 @@
 # Environment Variables Reference
 
-Complete reference for all environment variables used in Ampersend SDK examples.
+Complete reference for all environment variables used in ampersend SDK examples.
 
 ## Overview
 
-Examples use **Smart Account + Ampersend** for spend limits and monitoring via the Ampersend API.
+Examples use **Smart Account + ampersend** for spend limits and monitoring via the ampersend API.
 
 ## Required Variables
 
@@ -17,7 +17,7 @@ Examples use **Smart Account + Ampersend** for spend limits and monitoring via t
 
 | Variable                                | Description            | Default                            |
 | --------------------------------------- | ---------------------- | ---------------------------------- |
-| `EXAMPLES_A2A_BUYER__AMPERSEND_API_URL` | Ampersend API endpoint | `https://api.staging.ampersend.ai` |
+| `EXAMPLES_A2A_BUYER__AMPERSEND_API_URL` | ampersend API endpoint | `https://api.staging.ampersend.ai` |
 
 ## Setup
 
@@ -59,7 +59,7 @@ All examples default to staging services (testnet, rate-limited).
 | `BUYER_SMART_ACCOUNT_ADDRESS`           | Smart account for proxy      | _(required)_                                 |
 | `BUYER_SESSION_KEY_PRIVATE_KEY`         | Session key for proxy        | _(required)_                                 |
 | `BUYER_SMART_ACCOUNT_VALIDATOR_ADDRESS` | Validator contract           | `0x000000000013FDB5234E4E3162A810F54D9F7E98` |
-| `AMPERSEND_API_URL`                     | Ampersend API for proxy      | _(required)_                                 |
+| `AMPERSEND_API_URL`                     | ampersend API for proxy      | _(required)_                                 |
 | `BUYER_PRIVATE_KEY`                     | EOA private key (standalone) | _(alternative)_                              |
 
 ## Complete Configuration Examples
@@ -68,7 +68,7 @@ All examples default to staging services (testnet, rate-limited).
 
 ```bash
 # Agent configuration
-export EXAMPLES_A2A_BUYER__SMART_ACCOUNT_ADDRESS=0x...  # From Ampersend dashboard
+export EXAMPLES_A2A_BUYER__SMART_ACCOUNT_ADDRESS=0x...  # From ampersend dashboard
 export EXAMPLES_A2A_BUYER__SESSION_KEY_PRIVATE_KEY=0x...
 export EXAMPLES_A2A_BUYER__AMPERSEND_API_URL=https://api.staging.ampersend.ai
 
@@ -159,12 +159,12 @@ Update three variables:
 - **Never commit private keys** to version control
 - **Use environment files** (`.env`) and keep them gitignored
 - **Smart Accounts** provide better security than EOAs
-- **Spend limits** in Ampersend prevent unauthorized spending
+- **Spend limits** in ampersend prevent unauthorized spending
 - **Testnet first** - Always test on staging before production
 
 ## Learn More
 
 - [Getting Started Guide](../README.md)
 - [Running MCP Proxy](./running-mcp-proxy.md)
-- [Ampersend Dashboard (staging)](https://app.staging.ampersend.ai)
-- [Ampersend Dashboard (production)](https://app.ampersend.ai)
+- [ampersend Dashboard (staging)](https://app.staging.ampersend.ai)
+- [ampersend Dashboard (production)](https://app.ampersend.ai)

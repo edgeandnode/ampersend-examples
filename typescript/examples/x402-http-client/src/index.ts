@@ -16,7 +16,7 @@ async function main() {
     process.exit(1)
   }
 
-  // Create x402 client with Ampersend payment support
+  // Create x402 client with ampersend payment support
   const client = createAmpersendHttpClient({
     client: new x402Client(),
     smartAccountAddress,

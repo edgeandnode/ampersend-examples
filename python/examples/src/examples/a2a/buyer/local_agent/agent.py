@@ -21,7 +21,7 @@ Environment Variables:
         Get from: https://aistudio.google.com/apikey
     EXAMPLES_A2A_BUYER__SMART_ACCOUNT_ADDRESS: Agent smart account address (from dashboard)
     EXAMPLES_A2A_BUYER__SESSION_KEY_PRIVATE_KEY: Session key (from dashboard)
-    EXAMPLES_A2A_BUYER__AMPERSEND_API_URL: Ampersend API URL
+    EXAMPLES_A2A_BUYER__AMPERSEND_API_URL: ampersend API URL
         Default: https://api.staging.ampersend.ai
     EXAMPLES_A2A_BUYER__AGENT_URL_1: First remote agent URL
         Default: https://subgraph-a2a.x402.staging.thegraph.com
@@ -39,7 +39,7 @@ Features:
     - Automatic remote agent discovery
     - Per-agent conversation context management
     - Transparent x402 payment handling
-    - Spend limits via Ampersend
+    - Spend limits via ampersend
 """
 
 import os

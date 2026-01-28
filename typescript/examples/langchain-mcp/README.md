@@ -1,11 +1,11 @@
 # LangChain + x402 MCP Example
 
-Example showing how to use LangChain agents with x402-enabled MCP servers and Ampersend smart accounts for payment authorization with spend limits.
+Example showing how to use LangChain agents with x402-enabled MCP servers and ampersend smart accounts for payment authorization with spend limits.
 
 ## Prerequisites
 
 - OpenAI API key
-- Ampersend agent account (smart account + session key)
+- ampersend agent account (smart account + session key)
 
 ## Getting Started (Testnet)
 
@@ -32,8 +32,8 @@ Example showing how to use LangChain agents with x402-enabled MCP servers and Am
 
 | Variable                                               | Description                                        |
 | ------------------------------------------------------ | -------------------------------------------------- |
-| `TS__EXAMPLES__LANGCHAIN_MCP__SMART_ACCOUNT_ADDRESS`   | Smart account address (from Ampersend dashboard)   |
-| `TS__EXAMPLES__LANGCHAIN_MCP__SESSION_KEY_PRIVATE_KEY` | Session key private key (from Ampersend dashboard) |
+| `TS__EXAMPLES__LANGCHAIN_MCP__SMART_ACCOUNT_ADDRESS`   | Smart account address (from ampersend dashboard)   |
+| `TS__EXAMPLES__LANGCHAIN_MCP__SESSION_KEY_PRIVATE_KEY` | Session key private key (from ampersend dashboard) |
 | `OPENAI_API_KEY`                                       | Your OpenAI API key                                |
 
 ### Optional (have defaults)
@@ -41,7 +41,7 @@ Example showing how to use LangChain agents with x402-enabled MCP servers and Am
 | Variable                                         | Default                                              | Description       |
 | ------------------------------------------------ | ---------------------------------------------------- | ----------------- |
 | `TS__EXAMPLES__LANGCHAIN_MCP__MCP_SERVER_URL`    | `https://subgraph-mcp.x402.staging.thegraph.com/mcp` | MCP server URL    |
-| `TS__EXAMPLES__LANGCHAIN_MCP__AMPERSEND_API_URL` | `https://api.staging.ampersend.ai`                   | Ampersend API URL |
+| `TS__EXAMPLES__LANGCHAIN_MCP__AMPERSEND_API_URL` | `https://api.staging.ampersend.ai`                   | ampersend API URL |
 
 ## Run
 
@@ -60,8 +60,8 @@ pnpm dev "Query the Uniswap v3 subgraph for recent swaps"
 
 ## How it Works
 
-1. Creates an Ampersend MCP client with spend limits
+1. Creates an ampersend MCP client with spend limits
 2. Connects to the Subgraph MCP server
 3. Loads MCP tools into LangChain with `loadMcpTools()`
 4. Creates LangChain ReAct agent with OpenAI (gpt-4o-mini)
-5. Agent automatically handles x402 payments when calling tools (authorized via Ampersend)
+5. Agent automatically handles x402 payments when calling tools (authorized via ampersend)

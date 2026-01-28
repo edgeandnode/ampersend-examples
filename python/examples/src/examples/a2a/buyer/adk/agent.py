@@ -1,7 +1,7 @@
 """A2A Buyer Example with x402 Payment Support.
 
 This example demonstrates connecting directly to a remote A2A agent
-with automatic x402 payment handling via Ampersend.
+with automatic x402 payment handling via ampersend.
 
 Getting Started (Testnet):
     1. Create agent account at https://app.staging.ampersend.ai
@@ -16,7 +16,7 @@ Getting Started (Testnet):
 Environment Variables:
     EXAMPLES_A2A_BUYER__SMART_ACCOUNT_ADDRESS: Agent smart account address (from dashboard)
     EXAMPLES_A2A_BUYER__SESSION_KEY_PRIVATE_KEY: Session key (from dashboard)
-    EXAMPLES_A2A_BUYER__AMPERSEND_API_URL: Ampersend API URL
+    EXAMPLES_A2A_BUYER__AMPERSEND_API_URL: ampersend API URL
         Default: https://api.staging.ampersend.ai
     EXAMPLES_A2A_BUYER__SELLER_AGENT_URL: Remote agent URL
         Default: https://subgraph-a2a.x402.staging.thegraph.com

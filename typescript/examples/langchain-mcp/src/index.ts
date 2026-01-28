@@ -1,8 +1,8 @@
 /**
- * LangChain + x402 MCP Example with Ampersend Smart Account
+ * LangChain + x402 MCP Example with ampersend Smart Account
  *
  * This example demonstrates using LangChain agents with x402-enabled MCP servers
- * and Ampersend for payment authorization with spend limits.
+ * and ampersend for payment authorization with spend limits.
  *
  * See README.md for setup instructions.
  */
