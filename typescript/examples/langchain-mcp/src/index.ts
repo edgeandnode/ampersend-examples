@@ -1,15 +1,13 @@
 /**
- * LangChain + x402 MCP Example with Ampersend Smart Account
+ * LangChain + x402 MCP Example with ampersend Smart Account
  *
  * This example demonstrates using LangChain agents with x402-enabled MCP servers
- * and Ampersend for payment authorization with spend limits.
+ * and ampersend for payment authorization with spend limits.
  *
  * See README.md for setup instructions.
  */
 
-import { createAmpersendTreasurer } from "@ampersend_ai/ampersend-sdk/ampersend"
-import { Client } from "@ampersend_ai/ampersend-sdk/mcp/client"
-import { OWNABLE_VALIDATOR } from "@ampersend_ai/ampersend-sdk/smart-account"
+import { createAmpersendMcpClient } from "@ampersend_ai/ampersend-sdk"
 import { createReactAgent } from "@langchain/langgraph/prebuilt"
 import { loadMcpTools } from "@langchain/mcp-adapters"
 import { ChatOpenAI } from "@langchain/openai"
@@ -24,7 +22,6 @@ const SESSION_KEY_PRIVATE_KEY = process.env.TS__EXAMPLES__LANGCHAIN_MCP__SESSION
 const AMPERSEND_API_URL =
   process.env.TS__EXAMPLES__LANGCHAIN_MCP__AMPERSEND_API_URL ?? "https://api.staging.ampersend.ai"
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY
-const CHAIN_ID = parseInt(process.env.TS__EXAMPLES__LANGCHAIN_MCP__CHAIN_ID ?? "84532", 10) // Base Sepolia
 
 if (!SMART_ACCOUNT_ADDRESS || !SESSION_KEY_PRIVATE_KEY || !OPENAI_API_KEY) {
   console.error("Missing required environment variables:")
@@ -38,7 +35,6 @@ if (!SMART_ACCOUNT_ADDRESS || !SESSION_KEY_PRIVATE_KEY || !OPENAI_API_KEY) {
   console.error("\nOptional (have defaults):")
   console.error(`  TS__EXAMPLES__LANGCHAIN_MCP__MCP_SERVER_URL - MCP server URL (default: ${MCP_SERVER_URL})`)
   console.error(`  TS__EXAMPLES__LANGCHAIN_MCP__AMPERSEND_API_URL - Ampersend API URL (default: ${AMPERSEND_API_URL})`)
-  console.error(`  TS__EXAMPLES__LANGCHAIN_MCP__CHAIN_ID - Chain ID (default: ${CHAIN_ID})`)
   process.exit(1)
 }
 
@@ -48,26 +44,13 @@ const sessionKeyPrivateKey = SESSION_KEY_PRIVATE_KEY as Hex
 const openaiKey: string = OPENAI_API_KEY
 
 async function main() {
-  // Setup Ampersend treasurer with smart account wallet
-  const treasurer = createAmpersendTreasurer({
+  // Create X402 MCP client
+  const client = createAmpersendMcpClient({
+    clientInfo: { name: "langchain-mcp-example", version: "1.0.0" },
+    smartAccountAddress,
+    sessionKeyPrivateKey,
     apiUrl: AMPERSEND_API_URL,
-    walletConfig: {
-      type: "smart-account",
-      smartAccountAddress,
-      sessionKeyPrivateKey,
-      chainId: CHAIN_ID,
-      validatorAddress: OWNABLE_VALIDATOR,
-    },
   })
-
-  // Create X402 MCP client with payment support
-  const client = new Client(
-    { name: "langchain-mcp-example", version: "1.0.0" },
-    {
-      mcpOptions: { capabilities: { tools: {} } },
-      treasurer,
-    },
-  )
 
   // Connect to MCP server
   const transport = new StreamableHTTPClientTransport(new URL(MCP_SERVER_URL))

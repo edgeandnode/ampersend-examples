@@ -1,7 +1,7 @@
 """LangChain + x402 A2A Example.
 
 This example demonstrates using LangChain agents with x402-enabled A2A agents
-and Ampersend for payment authorization with spend limits.
+and ampersend for payment authorization with spend limits.
 
 Getting Started (Testnet):
     1. Create agent account at https://app.staging.ampersend.ai
@@ -17,7 +17,7 @@ Getting Started (Testnet):
 Environment Variables:
     EXAMPLES_LANGCHAIN_A2A_BUYER__SMART_ACCOUNT_ADDRESS: Agent smart account address (from dashboard)
     EXAMPLES_LANGCHAIN_A2A_BUYER__SESSION_KEY_PRIVATE_KEY: Session key (from dashboard)
-    EXAMPLES_LANGCHAIN_A2A_BUYER__AMPERSEND_API_URL: Ampersend API URL
+    EXAMPLES_LANGCHAIN_A2A_BUYER__AMPERSEND_API_URL: ampersend API URL
         Default: https://api.staging.ampersend.ai
     EXAMPLES_LANGCHAIN_A2A_BUYER__SELLER_URL: Remote A2A agent URL
         Default: https://subgraph-a2a.x402.staging.thegraph.com
@@ -29,14 +29,7 @@ import os
 import sys
 
 from langchain.agents import create_agent
-from langchain_ampersend import (
-    A2AToolkit,
-    AmpersendTreasurer,
-    ApiClient,
-    ApiClientOptions,
-    SmartAccountConfig,
-    SmartAccountWallet,
-)
+from langchain_ampersend import A2AToolkit, create_ampersend_treasurer
 from langchain_openai import ChatOpenAI
 from pydantic import SecretStr
 
@@ -68,23 +61,11 @@ async def main() -> None:
         print("  OPENAI_API_KEY - OpenAI API key")
         sys.exit(1)
 
-    # Setup smart account wallet
-    wallet = SmartAccountWallet(
-        config=SmartAccountConfig(
-            session_key=SESSION_KEY,
-            smart_account_address=SMART_ACCOUNT_ADDRESS,
-        )
-    )
-
-    # Setup Ampersend treasurer (with spend limits)
-    treasurer = AmpersendTreasurer(
-        api_client=ApiClient(
-            options=ApiClientOptions(
-                base_url=AMPERSEND_API_URL,
-                session_key_private_key=SESSION_KEY,
-            )
-        ),
-        wallet=wallet,
+    # Create treasurer
+    treasurer = create_ampersend_treasurer(
+        smart_account_address=SMART_ACCOUNT_ADDRESS,
+        session_key_private_key=SESSION_KEY,
+        api_url=AMPERSEND_API_URL,
     )
 
     # Create toolkit and initialize

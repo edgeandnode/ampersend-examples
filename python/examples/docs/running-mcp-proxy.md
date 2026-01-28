@@ -37,13 +37,13 @@ pnpm add -g @ampersend_ai/ampersend-sdk
 The proxy uses environment variables with an optional prefix. By default, `pnpm proxy:dev` uses the `TS__MCP_PROXY__`
 prefix. You can disable the prefix with `--env-prefix ""`.
 
-**Recommended: Smart Account with Ampersend** (from app.staging.ampersend.ai for testnet, app.ampersend.ai for
+**Recommended: Smart Account with ampersend** (from app.staging.ampersend.ai for testnet, app.ampersend.ai for
 production)
 
 ```bash
 # With default prefix (for pnpm proxy:dev)
-export TS__MCP_PROXY__BUYER_SMART_ACCOUNT_ADDRESS=0x...           # From staging dashboard
-export TS__MCP_PROXY__BUYER_SMART_ACCOUNT_KEY_PRIVATE_KEY=0x...  # From staging dashboard
+export TS__MCP_PROXY__BUYER_SMART_ACCOUNT_ADDRESS=0x...           # From ampersend dashboard
+export TS__MCP_PROXY__BUYER_SMART_ACCOUNT_KEY_PRIVATE_KEY=0x...  # From ampersend dashboard
 export TS__MCP_PROXY__AMPERSEND_API_URL=https://api.staging.ampersend.ai
 
 # OR without prefix (use --env-prefix "")
@@ -52,7 +52,7 @@ export BUYER_SMART_ACCOUNT_KEY_PRIVATE_KEY=0x...
 export AMPERSEND_API_URL=https://api.staging.ampersend.ai
 ```
 
-**Standalone Alternative: EOA (No Ampersend)**
+**Standalone Alternative: EOA (No ampersend)**
 
 ```bash
 # With prefix
@@ -83,7 +83,7 @@ http://localhost:8402/mcp?target=https://subgraph-mcp.x402.staging.ampersend.ai
 
 **Note**: Add the prefix from `--env-prefix` if using one (e.g., `TS__MCP_PROXY__` for `pnpm proxy:dev`).
 
-**Smart Account + Ampersend (Recommended)**:
+**Smart Account + ampersend (Recommended)**:
 
 ```bash
 BUYER_SMART_ACCOUNT_ADDRESS=0x...           # Your agent's smart account
@@ -193,4 +193,4 @@ ampersend-proxy 2>&1 | tee proxy.log
 
 - [X402 Specification](https://github.com/coinbase/x402)
 - [MCP Protocol](https://modelcontextprotocol.io)
-- [Ampersend SDK (npm)](https://www.npmjs.com/package/@ampersend_ai/ampersend-sdk)
+- [ampersend SDK (npm)](https://www.npmjs.com/package/@ampersend_ai/ampersend-sdk)

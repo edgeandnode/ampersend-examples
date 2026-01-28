@@ -131,4 +131,4 @@ src/
 
 ## License
 
-This package is part of the Ampersend monorepo.
+This package is part of the ampersend monorepo.

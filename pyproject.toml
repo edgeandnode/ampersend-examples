@@ -3,7 +3,7 @@ name = "ampersend-examples-python"
 version = "0.0.1"
 requires-python = ">=3.13"
 dependencies = [
-    "ampersend-sdk>=0.0.1a2",
+    "ampersend-sdk==0.0.6",
     "x402-a2a",
 ]
 

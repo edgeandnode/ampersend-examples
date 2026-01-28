@@ -128,7 +128,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "ampersend-sdk", specifier = ">=0.0.1a2" },
+    { name = "ampersend-sdk", specifier = "==0.0.6" },
     { name = "x402-a2a", git = "https://github.com/google-agentic-commerce/a2a-x402?subdirectory=python%2Fx402_a2a&rev=a50b512a61880c180bc82c1332aee271f46942b6" },
 ]
 
@@ -140,7 +140,7 @@ dev = [
 
 [[package]]
 name = "ampersend-sdk"
-version = "0.0.1"
+version = "0.0.6"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "a2a-sdk" },
@@ -153,9 +153,9 @@ dependencies = [
     { name = "x402" },
     { name = "x402-a2a" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/6f/14/3a22c46a0b9fa62697370b59577020013a7ff4160bb21f1f16587eaf6ea2/ampersend_sdk-0.0.1.tar.gz", hash = "sha256:453cf96f2daa91d27967cbf46a96b8b86c646bc3001b8e7a715c99f75369ab0e", size = 19671, upload-time = "2025-12-10T18:31:10.041Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/d3/22/cb9ae7443772573714c1c7485694b0c373643837e1bbc8759b023d66c451/ampersend_sdk-0.0.6.tar.gz", hash = "sha256:3be8f36fcfb7183da21ebb817b13d80b1d8ae00362339eb253a2003891d5a89b", size = 20756, upload-time = "2026-01-28T18:16:09.545Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/33/7f/3e96501a4d0b68b3d791e8ebb0171782442474c923bd3e4af92f7e65bf62/ampersend_sdk-0.0.1-py3-none-any.whl", hash = "sha256:01d4737d51cd93bf7e001ef235e44f6a474f877c1025927cb3f80e5a5a6b8fc5", size = 33510, upload-time = "2025-12-10T18:31:07.855Z" },
+    { url = "https://files.pythonhosted.org/packages/0c/ba/831e33f92021f79a4da1afcfbc8f2d4bda66167c76920fcee7fd524508b6/ampersend_sdk-0.0.6-py3-none-any.whl", hash = "sha256:dde94fbd8e691b8be302e9ee513ea159d1a805d868d8ee33e1fd460c994fdb89", size = 35585, upload-time = "2026-01-28T18:16:08.432Z" },
 ]
 
 [[package]]
@@ -628,11 +628,11 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "ampersend-sdk" },
+    { name = "ampersend-sdk", specifier = "==0.0.6" },
     { name = "eth-account" },
     { name = "google-adk", specifier = ">=1.14.0,<=1.14.1" },
     { name = "langchain", specifier = ">=0.3.0" },
-    { name = "langchain-ampersend", specifier = "==0.0.1" },
+    { name = "langchain-ampersend", specifier = "==0.0.6" },
     { name = "langchain-openai", specifier = ">=0.3.0" },
     { name = "langgraph", specifier = ">=0.5.0" },
 ]
@@ -1516,16 +1516,16 @@ wheels = [
 
 [[package]]
 name = "langchain-ampersend"
-version = "0.0.1"
+version = "0.0.6"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "ampersend-sdk" },
     { name = "httpx" },
     { name = "langchain-core" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/81/66/3118528dc503e016836f12f067a18f73073c729f40ead8dc1886834bc414/langchain_ampersend-0.0.1.tar.gz", hash = "sha256:91d517b27fcc394f7f84a389c413653b3b17831130af79298bfeaaa70852ac8c", size = 3473, upload-time = "2026-01-14T21:10:12.804Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/90/17/b88aaaf1fa2c398c7fba9ebc49cebfb302b1e8016b2840bd9163dbb4b30b/langchain_ampersend-0.0.6.tar.gz", hash = "sha256:517e7b4ae8b239d609acbab6a144898ef492d062290399ca75a981aa865c8efa", size = 3290, upload-time = "2026-01-28T18:16:26.941Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/e9/54/e424824581af9ea2e4a6ec587867ef097d6a2d5d28c652de28dde57f273e/langchain_ampersend-0.0.1-py3-none-any.whl", hash = "sha256:0c149fd35cedc4e15487a4556a0e5c34901a09225e1080a2aa7f35e402203e3f", size = 5242, upload-time = "2026-01-14T21:10:11.854Z" },
+    { url = "https://files.pythonhosted.org/packages/87/65/723b1436afd182ec38989e4c9577cfff3e0f42750a90da24ed98b7226353/langchain_ampersend-0.0.6-py3-none-any.whl", hash = "sha256:670cf44193e004c6eeeeb2a27b45f9de299c73edfd7e2bf5238032ac5bc621e4", size = 5001, upload-time = "2026-01-28T18:16:25.697Z" },
 ]
 
 [[package]]
