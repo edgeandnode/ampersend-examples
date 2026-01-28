@@ -29,14 +29,7 @@ import os
 import sys
 
 from langchain.agents import create_agent
-from langchain_ampersend import (
-    A2AToolkit,
-    AmpersendTreasurer,
-    ApiClient,
-    ApiClientOptions,
-    SmartAccountConfig,
-    SmartAccountWallet,
-)
+from langchain_ampersend import A2AToolkit, create_ampersend_treasurer
 from langchain_openai import ChatOpenAI
 from pydantic import SecretStr
 
@@ -68,23 +61,11 @@ async def main() -> None:
         print("  OPENAI_API_KEY - OpenAI API key")
         sys.exit(1)
 
-    # Setup smart account wallet
-    wallet = SmartAccountWallet(
-        config=SmartAccountConfig(
-            session_key=SESSION_KEY,
-            smart_account_address=SMART_ACCOUNT_ADDRESS,
-        )
-    )
-
-    # Setup Ampersend treasurer (with spend limits)
-    treasurer = AmpersendTreasurer(
-        api_client=ApiClient(
-            options=ApiClientOptions(
-                base_url=AMPERSEND_API_URL,
-                session_key_private_key=SESSION_KEY,
-            )
-        ),
-        wallet=wallet,
+    # Create treasurer
+    treasurer = create_ampersend_treasurer(
+        smart_account_address=SMART_ACCOUNT_ADDRESS,
+        session_key_private_key=SESSION_KEY,
+        api_url=AMPERSEND_API_URL,
     )
 
     # Create toolkit and initialize

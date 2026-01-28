@@ -4,9 +4,9 @@ version = "0.0.1"
 description = "Examples"
 dependencies = [
     "google-adk>=1.14.0,<=1.14.1",
-    "ampersend-sdk",
+    "ampersend-sdk==0.0.6",
     "eth_account",
-    "langchain-ampersend==0.0.1",
+    "langchain-ampersend==0.0.6",
     "langchain>=0.3.0",
     "langgraph>=0.5.0",
     "langchain-openai>=0.3.0",

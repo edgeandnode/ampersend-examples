@@ -1,4 +1,4 @@
-# Ampersend Examples - Python
+# ampersend Examples - Python
 
 Comprehensive examples demonstrating x402 payment integration with A2A (Agent-to-Agent) and MCP (Model Context Protocol)
 protocols.
@@ -15,10 +15,10 @@ Get started in minutes with free testnet:
 
 ### 1. Create Agent Account
 
-1. Visit **https://app.staging.ampersend.ai**
+1. Visit **<https://app.staging.ampersend.ai>**
 2. Create an agent account
 3. Get your **Smart Account address** and **session key**
-4. Fund with testnet USDC: **https://faucet.circle.com/** (select Base Sepolia)
+4. Fund with testnet USDC: **<https://faucet.circle.com/>** (select Base Sepolia)
 
 ### 2. Clone and Setup
 
@@ -32,8 +32,8 @@ uv sync
 
 ```bash
 # Smart Account (recommended - with spend limits)
-export EXAMPLES_A2A_BUYER__SMART_ACCOUNT_ADDRESS=0x...  # From staging dashboard
-export EXAMPLES_A2A_BUYER__SMART_ACCOUNT_KEY_PRIVATE_KEY=0x...  # From staging dashboard
+export EXAMPLES_A2A_BUYER__SMART_ACCOUNT_ADDRESS=0x...  # From ampersend dashboard
+export EXAMPLES_A2A_BUYER__SESSION_KEY_PRIVATE_KEY=0x...  # From ampersend dashboard
 export EXAMPLES_A2A_BUYER__AMPERSEND_API_URL=https://api.staging.ampersend.ai
 ```
 
@@ -52,11 +52,13 @@ The agent automatically handles the payment flow to query the data. You just mad
 
 ### Ready for Production?
 
-1. Create account at **https://app.ampersend.ai**
+1. Create account at **<https://app.ampersend.ai>**
 2. Update environment:
+
    ```bash
    export EXAMPLES_A2A_BUYER__AMPERSEND_API_URL=https://api.ampersend.ai
    ```
+
 3. Use production endpoints (see examples below)
 
 **Note**: Production uses Base mainnet with real USDC. Staging services are rate-limited and for testing only.
@@ -79,7 +81,7 @@ Connect directly to The Graph's subgraph A2A service and let the SDK handle paym
 ```bash
 # Testnet (staging)
 export EXAMPLES_A2A_BUYER__SMART_ACCOUNT_ADDRESS=0x...
-export EXAMPLES_A2A_BUYER__SMART_ACCOUNT_KEY_PRIVATE_KEY=0x...
+export EXAMPLES_A2A_BUYER__SESSION_KEY_PRIVATE_KEY=0x...
 export EXAMPLES_A2A_BUYER__AMPERSEND_API_URL=https://api.staging.ampersend.ai
 
 # Option 1: Interactive CLI
@@ -91,8 +93,7 @@ uv --directory=python/examples run -- adk web src/examples/a2a/buyer
 
 **Features**:
 
-- Smart Account + EOA auto-detection
-- AmpersendTreasurer with spend limits
+- Smart Account with spend limits via Ampersend
 - Defaults to staging subgraph service
 
 ### 2. A2A Local Orchestrator
@@ -106,7 +107,7 @@ Build a local agent that can discover and delegate to multiple specialized remot
 ```bash
 # Testnet (staging)
 export EXAMPLES_A2A_BUYER__SMART_ACCOUNT_ADDRESS=0x...
-export EXAMPLES_A2A_BUYER__SMART_ACCOUNT_KEY_PRIVATE_KEY=0x...
+export EXAMPLES_A2A_BUYER__SESSION_KEY_PRIVATE_KEY=0x...
 export EXAMPLES_A2A_BUYER__AMPERSEND_API_URL=https://api.staging.ampersend.ai
 export GOOGLE_API_KEY=...  # Get from https://aistudio.google.com/apikey
 
@@ -122,7 +123,6 @@ uv --directory=python/examples run -- adk web src/examples/a2a/buyer
 
 **Features**:
 
-- Uses `X402RemoteAgentToolset` for remote agent tools
 - Automatic agent discovery
 - Per-agent conversation context management
 - Multi-agent orchestration
@@ -147,7 +147,7 @@ Use MCP tools through a proxy that handles x402 payments transparently.
 ```bash
 # 1. Start MCP proxy (separate terminal)
 export BUYER_SMART_ACCOUNT_ADDRESS=0x...
-export BUYER_SMART_ACCOUNT_KEY_PRIVATE_KEY=0x...
+export BUYER_SESSION_KEY_PRIVATE_KEY=0x...
 export AMPERSEND_API_URL=https://api.staging.ampersend.ai
 ampersend-proxy  # Runs on http://localhost:8402
 
@@ -186,44 +186,16 @@ uv --directory=python/examples run -- \
 
 ---
 
-## Standalone Alternative
-
-For testing without Ampersend account (local wallet only):
-
-```bash
-# Configure with EOA
-export EXAMPLES_A2A_BUYER__PRIVATE_KEY=0x...  # Your wallet
-export EXAMPLES_A2A_BUYER__USE_NAIVE_AUTHORIZER=true  # Skip API checks
-
-# Run any buyer example (uses staging services)
-uv --directory=python/examples run -- adk run src/examples/a2a/buyer/adk
-# or
-uv --directory=python/examples run -- adk run src/examples/a2a/buyer/local_agent
-```
-
-**Note**: Standalone mode has no spend limits or monitoring. Recommended for testing only.
-
----
-
 ## Environment Variables
 
 See [Environment Variables Reference](./docs/environment-variables.md) for complete details.
 
 ### Quick Reference
 
-**Smart Account Mode (Recommended)**:
-
 ```bash
 EXAMPLES_A2A_BUYER__SMART_ACCOUNT_ADDRESS=0x...
-EXAMPLES_A2A_BUYER__SMART_ACCOUNT_KEY_PRIVATE_KEY=0x...
+EXAMPLES_A2A_BUYER__SESSION_KEY_PRIVATE_KEY=0x...
 EXAMPLES_A2A_BUYER__AMPERSEND_API_URL=https://api.staging.ampersend.ai
-```
-
-**Standalone Mode**:
-
-```bash
-EXAMPLES_A2A_BUYER__PRIVATE_KEY=0x...
-EXAMPLES_A2A_BUYER__USE_NAIVE_AUTHORIZER=true
 ```
 
 **Service URLs** (optional, defaults to staging):
@@ -314,8 +286,8 @@ uv sync
 
 **Solutions**:
 
-- **Testnet**: Get USDC from https://faucet.circle.com/ (Base Sepolia)
-- **Production**: Check balance in https://app.ampersend.ai
+- **Testnet**: Get USDC from <https://faucet.circle.com/> (Base Sepolia)
+- **Production**: Check balance in <https://app.ampersend.ai>
 - **Standalone**: Check your wallet USDC balance
 
 ### "Agent not found" (local_agent example)

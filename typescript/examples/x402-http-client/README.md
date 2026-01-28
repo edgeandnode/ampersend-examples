@@ -4,7 +4,7 @@ Demonstrates using Ampersend with the standard x402 fetch wrapper for HTTP API p
 
 ## Overview
 
-This example shows how to add Ampersend payment authorization to x402-protected HTTP APIs. It uses the `AmpersendTreasurer` for spend limits and payment monitoring via the Ampersend API.
+This example shows how to add Ampersend payment authorization to x402-protected HTTP APIs. It uses `createAmpersendHttpClient()` with spend limits and payment monitoring via the Ampersend API.
 
 ## Installation
 

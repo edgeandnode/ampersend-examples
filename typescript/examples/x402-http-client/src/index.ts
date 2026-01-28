@@ -1,5 +1,4 @@
-import { createAmpersendTreasurer } from "@ampersend_ai/ampersend-sdk/ampersend"
-import { wrapWithAmpersend } from "@ampersend_ai/ampersend-sdk/x402"
+import { createAmpersendHttpClient } from "@ampersend_ai/ampersend-sdk"
 import { wrapFetchWithPayment, x402Client } from "@x402/fetch"
 
 async function main() {
@@ -17,23 +16,15 @@ async function main() {
     process.exit(1)
   }
 
-  // --- Standard x402 setup ---
-  const client = new x402Client()
-
-  // --- Ampersend treasurer with spend limits and monitoring ---
-  const treasurer = createAmpersendTreasurer({
+  // Create x402 client with Ampersend payment support
+  const client = createAmpersendHttpClient({
+    client: new x402Client(),
+    smartAccountAddress,
+    sessionKeyPrivateKey: sessionKey,
     apiUrl: "https://api.staging.ampersend.ai",
-    walletConfig: {
-      type: "smart-account",
-      smartAccountAddress,
-      sessionKeyPrivateKey: sessionKey,
-      chainId: 84532, // Base Sepolia,
-      validatorAddress: "0x000000000013fdB5234E4E3162a810F54d9f7E98" as `0x${string}`,
-    },
   })
-  wrapWithAmpersend(client, treasurer, ["base-sepolia"])
 
-  // --- Make request ---
+  // Make request with automatic payment handling
   const fetchWithPayment = wrapFetchWithPayment(fetch, client)
   const response = await fetchWithPayment("https://paid-api.example.com/resource")
   console.log("Response status:", response.status)

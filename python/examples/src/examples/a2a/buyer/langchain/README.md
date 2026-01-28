@@ -42,9 +42,8 @@ uv --directory=python/examples run python -m examples.a2a.buyer.langchain.agent 
 
 ## How it works
 
-1. Creates `SmartAccountWallet` from session key and smart account address
-2. Uses `AmpersendTreasurer` for payment authorization with spend limits
-3. Connects `A2AToolkit` to remote A2A agent
-4. Loads A2A tools into LangChain with `toolkit.get_tools()`
-5. Creates LangChain agent with OpenAI
-6. Agent automatically handles x402 payments when calling remote agent
+1. Creates an Ampersend treasurer with spend limits
+2. Connects `A2AToolkit` to remote A2A agent
+3. Loads A2A tools into LangChain with `toolkit.get_tools()`
+4. Creates LangChain agent with OpenAI
+5. Agent automatically handles x402 payments when calling remote agent

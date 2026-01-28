@@ -42,8 +42,8 @@ production)
 
 ```bash
 # With default prefix (for pnpm proxy:dev)
-export TS__MCP_PROXY__BUYER_SMART_ACCOUNT_ADDRESS=0x...           # From staging dashboard
-export TS__MCP_PROXY__BUYER_SMART_ACCOUNT_KEY_PRIVATE_KEY=0x...  # From staging dashboard
+export TS__MCP_PROXY__BUYER_SMART_ACCOUNT_ADDRESS=0x...           # From Ampersend dashboard
+export TS__MCP_PROXY__BUYER_SMART_ACCOUNT_KEY_PRIVATE_KEY=0x...  # From Ampersend dashboard
 export TS__MCP_PROXY__AMPERSEND_API_URL=https://api.staging.ampersend.ai
 
 # OR without prefix (use --env-prefix "")
