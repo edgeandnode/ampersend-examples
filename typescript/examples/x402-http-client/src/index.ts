@@ -1,5 +1,5 @@
 import { createAmpersendHttpClient } from "@ampersend_ai/ampersend-sdk"
-import { wrapFetchWithPayment, x402Client } from "@x402/fetch"
+import { wrapFetchWithPayment } from "@x402/fetch"
 
 async function main() {
   const smartAccountAddress = process.env.TS__EXAMPLES__X402_HTTP_CLIENT__SMART_ACCOUNT_ADDRESS as
@@ -18,10 +18,10 @@ async function main() {
 
   // Create x402 client with ampersend payment support
   const client = createAmpersendHttpClient({
-    client: new x402Client(),
     smartAccountAddress,
     sessionKeyPrivateKey: sessionKey,
     apiUrl: "https://api.staging.ampersend.ai",
+    network: "base-sepolia",
   })
 
   // Make request with automatic payment handling

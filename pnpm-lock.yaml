@@ -54,14 +54,11 @@ importers:
   typescript/examples/fastmcp-x402-server:
     dependencies:
       '@ampersend_ai/ampersend-sdk':
-        specifier: 0.0.6
-        version: 0.0.6(@solana/sysvars@3.0.3(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3))(@tanstack/query-core@5.90.7)(@tanstack/react-query@5.90.7(react@18.3.1))(@x402/core@2.2.0)(bufferutil@4.0.9)(ethers@6.16.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(fastestsmallesttextencoderdecoder@1.0.22)(fastmcp@https://codeload.github.com/edgeandnode/fastmcp/tar.gz/358855f0fb94c9537fd0f1c71c6ccb2a92725218(effect@3.19.15))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@5.0.10)(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))
+        specifier: 0.0.9
+        version: 0.0.9(@solana/sysvars@3.0.3(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3))(@tanstack/query-core@5.90.7)(@tanstack/react-query@5.90.7(react@18.3.1))(bufferutil@4.0.9)(ethers@6.16.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(fastestsmallesttextencoderdecoder@1.0.22)(react@18.3.1)(typescript@5.9.3)(utf-8-validate@5.0.10)(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))
       '@coinbase/x402':
         specifier: ^0.6.6
         version: 0.6.6(@solana/sysvars@3.0.3(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3))(@tanstack/query-core@5.90.7)(@tanstack/react-query@5.90.7(react@18.3.1))(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(react@18.3.1)(typescript@5.9.3)(utf-8-validate@5.0.10)(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))
-      fastmcp:
-        specifier: github:edgeandnode/fastmcp#358855f0fb94c9537fd0f1c71c6ccb2a92725218
-        version: https://codeload.github.com/edgeandnode/fastmcp/tar.gz/358855f0fb94c9537fd0f1c71c6ccb2a92725218(effect@3.19.15)
       x402:
         specifier: ^0.6.6
         version: 0.6.6(@solana/sysvars@3.0.3(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3))(@tanstack/query-core@5.90.7)(@tanstack/react-query@5.90.7(react@18.3.1))(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(react@18.3.1)(typescript@5.9.3)(utf-8-validate@5.0.10)(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))
@@ -76,26 +73,20 @@ importers:
   typescript/examples/langchain-mcp:
     dependencies:
       '@ampersend_ai/ampersend-sdk':
-        specifier: 0.0.6
-        version: 0.0.6(@x402/core@2.2.0)(bufferutil@4.0.9)(ethers@6.16.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(fastmcp@https://codeload.github.com/edgeandnode/fastmcp/tar.gz/6446ea7b56eb291a6d4d7321e4a41ff0aacba1ef(effect@3.19.15))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@5.0.10)(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))
+        specifier: 0.0.9
+        version: 0.0.9(bufferutil@4.0.9)(ethers@6.16.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@5.0.10)(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))
       '@langchain/core':
         specifier: ^1.0.0
         version: 1.1.17(openai@6.8.1(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(zod@4.1.12))
       '@langchain/langgraph':
         specifier: ^1.0.0
-        version: 1.1.2(@langchain/core@1.1.17(openai@6.8.1(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(zod@4.1.12)))(react@18.3.1)(zod-to-json-schema@3.24.6(zod@3.25.76))(zod@4.1.12)
+        version: 1.1.2(@langchain/core@1.1.17(openai@6.8.1(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(zod@4.1.12)))(react@18.3.1)(zod-to-json-schema@3.24.6(zod@4.1.12))(zod@4.1.12)
       '@langchain/mcp-adapters':
         specifier: ^1.0.0
-        version: 1.0.0(@cfworker/json-schema@4.1.1)(@langchain/core@1.1.17(openai@6.8.1(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(zod@4.1.12)))(@langchain/langgraph@1.1.2(@langchain/core@1.1.17(openai@6.8.1(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(zod@4.1.12)))(react@18.3.1)(zod-to-json-schema@3.24.6(zod@3.25.76))(zod@4.1.12))
+        version: 1.0.0(@cfworker/json-schema@4.1.1)(@langchain/core@1.1.17(openai@6.8.1(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(zod@4.1.12)))(@langchain/langgraph@1.1.2(@langchain/core@1.1.17(openai@6.8.1(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(zod@4.1.12)))(react@18.3.1)(zod-to-json-schema@3.24.6(zod@4.1.12))(zod@4.1.12))
       '@langchain/openai':
         specifier: ^1.0.0
         version: 1.0.0(@langchain/core@1.1.17(openai@6.8.1(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(zod@4.1.12)))(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))
-      '@modelcontextprotocol/sdk':
-        specifier: github:edgeandnode/mcp-typescript-sdk#2de06543904483073d8cc13db1d0e08e16601081
-        version: https://codeload.github.com/edgeandnode/mcp-typescript-sdk/tar.gz/2de06543904483073d8cc13db1d0e08e16601081
-      fastmcp:
-        specifier: github:edgeandnode/fastmcp#6446ea7b56eb291a6d4d7321e4a41ff0aacba1ef
-        version: https://codeload.github.com/edgeandnode/fastmcp/tar.gz/6446ea7b56eb291a6d4d7321e4a41ff0aacba1ef(effect@3.19.15)
       langchain:
         specifier: ^1.0.0
         version: 1.2.13(@langchain/core@1.1.17(openai@6.8.1(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(zod@4.1.12)))(openai@6.8.1(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(zod@4.1.12))(react@18.3.1)(zod-to-json-schema@3.24.6(zod@4.1.12))
@@ -110,20 +101,11 @@ importers:
   typescript/examples/x402-http-client:
     dependencies:
       '@ampersend_ai/ampersend-sdk':
-        specifier: 0.0.6
-        version: 0.0.6(@solana/sysvars@3.0.3(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3))(@tanstack/query-core@5.90.7)(@tanstack/react-query@5.90.7(react@18.3.1))(@x402/core@2.2.0)(bufferutil@4.0.9)(ethers@6.16.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(fastestsmallesttextencoderdecoder@1.0.22)(fastmcp@https://codeload.github.com/edgeandnode/fastmcp/tar.gz/6446ea7b56eb291a6d4d7321e4a41ff0aacba1ef(effect@3.19.15))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@5.0.10)(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))
-      '@modelcontextprotocol/sdk':
-        specifier: github:edgeandnode/mcp-typescript-sdk#2de06543904483073d8cc13db1d0e08e16601081
-        version: https://codeload.github.com/edgeandnode/mcp-typescript-sdk/tar.gz/2de06543904483073d8cc13db1d0e08e16601081
-      '@x402/core':
-        specifier: ^2.1.0
-        version: 2.2.0
+        specifier: 0.0.9
+        version: 0.0.9(@solana/sysvars@3.0.3(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3))(@tanstack/query-core@5.90.7)(@tanstack/react-query@5.90.7(react@18.3.1))(bufferutil@4.0.9)(ethers@6.16.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(fastestsmallesttextencoderdecoder@1.0.22)(react@18.3.1)(typescript@5.9.3)(utf-8-validate@5.0.10)(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))
       '@x402/fetch':
         specifier: ^2.1.0
         version: 2.2.0(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)
-      fastmcp:
-        specifier: github:edgeandnode/fastmcp#6446ea7b56eb291a6d4d7321e4a41ff0aacba1ef
-        version: https://codeload.github.com/edgeandnode/fastmcp/tar.gz/6446ea7b56eb291a6d4d7321e4a41ff0aacba1ef(effect@3.19.15)
       x402:
         specifier: ^0.6.6
         version: 0.6.6(@solana/sysvars@3.0.3(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3))(@tanstack/query-core@5.90.7)(@tanstack/react-query@5.90.7(react@18.3.1))(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(react@18.3.1)(typescript@5.9.3)(utf-8-validate@5.0.10)(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))
@@ -140,16 +122,17 @@ packages:
   '@adraffy/ens-normalize@1.11.1':
     resolution: {integrity: sha512-nhCBV3quEgesuf7c7KYfperqSS14T8bYuvJ8PcLJp6znkZpFc0AuW4qBtr8eKVyPPe/8RSr7sglCWPU5eaxwKQ==}
 
-  '@ampersend_ai/ampersend-sdk@0.0.6':
-    resolution: {integrity: sha512-NYE1JUNa6mcl1oxJ9TEvHChyrqvsDtl+KPrCGHfKjjwGiCzeTtBF3+jVz8JH9MVqVRpxQo4VZ9VvQglxj0b6DQ==}
-    version: 0.0.6
+  '@ampersend_ai/ampersend-sdk@0.0.9':
+    resolution: {integrity: sha512-3cFiMBvrlJAW0CCaFysov5+qlbWAz8ULAcZB7wvkG22kZjClWtE3+0dAPhB51eWTMwde+kfCv7YC6i2nqiTb3A==}
     hasBin: true
-    peerDependencies:
-      '@x402/core': ^2.1.0
-      fastmcp: ^3.17.0
-    peerDependenciesMeta:
-      '@x402/core':
-        optional: true
+
+  '@ampersend_ai/fastmcp@1.0.0':
+    resolution: {integrity: sha512-8yYIURlNcpdVQEjeAaSRfbAvcI05elTzZXEv0XdR6f5jvRThM+3Q1rkWWQqZhC4+74eC+gko7BjXxvOmdppGvg==}
+    hasBin: true
+
+  '@ampersend_ai/modelcontextprotocol-sdk@1.20.1':
+    resolution: {integrity: sha512-u28xfWkgMyYsFW9jyJWuU8BndOFGJVPGRXu6g7t1iuOOTDA76lBAB5a6cbWzL4Y852gHYNyit3qTSL4I3EHCuw==}
+    engines: {node: '>=18'}
 
   '@babel/code-frame@7.27.1':
     resolution: {integrity: sha512-cjQ7ZlQ0Mv3b47hABuTevyTuYN4i+loJKGeV9flcCgIK37cCXRh+L1bd3iBHlynerhQ7BhCkn2BPbQUL+rGqFg==}
@@ -800,11 +783,6 @@ packages:
     peerDependenciesMeta:
       '@cfworker/json-schema':
         optional: true
-
-  '@modelcontextprotocol/sdk@https://codeload.github.com/edgeandnode/mcp-typescript-sdk/tar.gz/2de06543904483073d8cc13db1d0e08e16601081':
-    resolution: {tarball: https://codeload.github.com/edgeandnode/mcp-typescript-sdk/tar.gz/2de06543904483073d8cc13db1d0e08e16601081}
-    version: 1.20.1-edgeandnode.1
-    engines: {node: '>=18'}
 
   '@napi-rs/wasm-runtime@0.2.12':
     resolution: {integrity: sha512-ZVWUcfwY4E/yPitQJl481FjFo3K22D6qF0DuFH6Y/nbnE11GY5uguDxZMGXPQ8WQ0128MXQD7TnfHyK4oWoIJQ==}
@@ -2587,10 +2565,6 @@ packages:
     peerDependencies:
       express: '>= 4.11'
 
-  express@5.1.0:
-    resolution: {integrity: sha512-DT9ck5YIRU+8GYzzU5kT3eHGA5iL+1Zd0EutOmTE9Dtk+Tvuzd23VBU+ec7HPNSTxXYO55gPV/hq4pSBJDjFpA==}
-    engines: {node: '>= 18'}
-
   express@5.2.1:
     resolution: {integrity: sha512-hIS4idWWai69NezIdRt2xFVofaF4j+6INOpJlVOLDO8zXGpUVEVzIYk12UUi2JzjEzWL3IOAxcTubgz9Po0yXw==}
     engines: {node: '>= 18'}
@@ -2634,16 +2608,6 @@ packages:
 
   fastestsmallesttextencoderdecoder@1.0.22:
     resolution: {integrity: sha512-Pb8d48e+oIuY4MaM64Cd7OW1gt4nxCHs7/ddPPZ/Ic3sg8yVGM7O9wDvZ7us6ScaUupzM+pfBolwtYhN1IxBIw==}
-
-  fastmcp@https://codeload.github.com/edgeandnode/fastmcp/tar.gz/358855f0fb94c9537fd0f1c71c6ccb2a92725218:
-    resolution: {tarball: https://codeload.github.com/edgeandnode/fastmcp/tar.gz/358855f0fb94c9537fd0f1c71c6ccb2a92725218}
-    version: 1.0.0-edgeandnode.1
-    hasBin: true
-
-  fastmcp@https://codeload.github.com/edgeandnode/fastmcp/tar.gz/6446ea7b56eb291a6d4d7321e4a41ff0aacba1ef:
-    resolution: {tarball: https://codeload.github.com/edgeandnode/fastmcp/tar.gz/6446ea7b56eb291a6d4d7321e4a41ff0aacba1ef}
-    version: 1.0.0-edgeandnode.1
-    hasBin: true
 
   fdir@6.5.0:
     resolution: {integrity: sha512-tIbYtZbucOs0BRGqPJkshJUYdL+SDH7dVM8gjy+ERp3WAUjLEFJE+02kanyHtwjWOnwrKYBiwAmM0p4kLJAnXg==}
@@ -4307,22 +4271,21 @@ snapshots:
 
   '@adraffy/ens-normalize@1.11.1': {}
 
-  '@ampersend_ai/ampersend-sdk@0.0.6(@solana/sysvars@3.0.3(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3))(@tanstack/query-core@5.90.7)(@tanstack/react-query@5.90.7(react@18.3.1))(@x402/core@2.2.0)(bufferutil@4.0.9)(ethers@6.16.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(fastestsmallesttextencoderdecoder@1.0.22)(fastmcp@https://codeload.github.com/edgeandnode/fastmcp/tar.gz/358855f0fb94c9537fd0f1c71c6ccb2a92725218(effect@3.19.15))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@5.0.10)(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))':
+  '@ampersend_ai/ampersend-sdk@0.0.9(@solana/sysvars@3.0.3(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3))(@tanstack/query-core@5.90.7)(@tanstack/react-query@5.90.7(react@18.3.1))(bufferutil@4.0.9)(ethers@6.16.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(fastestsmallesttextencoderdecoder@1.0.22)(react@18.3.1)(typescript@5.9.3)(utf-8-validate@5.0.10)(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))':
     dependencies:
-      '@modelcontextprotocol/sdk': https://codeload.github.com/edgeandnode/mcp-typescript-sdk/tar.gz/2de06543904483073d8cc13db1d0e08e16601081
+      '@modelcontextprotocol/sdk': '@ampersend_ai/modelcontextprotocol-sdk@1.20.1'
       '@rhinestone/module-sdk': 0.4.0(viem@2.45.0(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@3.25.76))
       '@types/express': 5.0.6
+      '@x402/core': 2.2.0
       async-mutex: 0.5.0
       commander: 12.1.0
       effect: 3.19.15
       express: 5.2.1
-      fastmcp: https://codeload.github.com/edgeandnode/fastmcp/tar.gz/358855f0fb94c9537fd0f1c71c6ccb2a92725218(effect@3.19.15)
+      fastmcp: '@ampersend_ai/fastmcp@1.0.0(effect@3.19.15)'
       siwe: 3.0.0(ethers@6.16.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))
       viem: 2.45.0(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@3.25.76)
       x402: 0.6.6(@solana/sysvars@3.0.3(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3))(@tanstack/query-core@5.90.7)(@tanstack/react-query@5.90.7(react@18.3.1))(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(react@18.3.1)(typescript@5.9.3)(utf-8-validate@5.0.10)(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))
       zod: 3.25.76
-    optionalDependencies:
-      '@x402/core': 2.2.0
     transitivePeerDependencies:
       - '@azure/app-configuration'
       - '@azure/cosmos'
@@ -4340,9 +4303,11 @@ snapshots:
       - '@tanstack/react-query'
       - '@types/react'
       - '@upstash/redis'
+      - '@valibot/to-json-schema'
       - '@vercel/blob'
       - '@vercel/functions'
       - '@vercel/kv'
+      - arktype
       - aws4fetch
       - bufferutil
       - db0
@@ -4358,83 +4323,27 @@ snapshots:
       - react
       - react-native
       - supports-color
+      - sury
       - typescript
       - uploadthing
       - utf-8-validate
       - ws
 
-  '@ampersend_ai/ampersend-sdk@0.0.6(@solana/sysvars@3.0.3(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3))(@tanstack/query-core@5.90.7)(@tanstack/react-query@5.90.7(react@18.3.1))(@x402/core@2.2.0)(bufferutil@4.0.9)(ethers@6.16.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(fastestsmallesttextencoderdecoder@1.0.22)(fastmcp@https://codeload.github.com/edgeandnode/fastmcp/tar.gz/6446ea7b56eb291a6d4d7321e4a41ff0aacba1ef(effect@3.19.15))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@5.0.10)(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))':
+  '@ampersend_ai/ampersend-sdk@0.0.9(bufferutil@4.0.9)(ethers@6.16.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@5.0.10)(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))':
     dependencies:
-      '@modelcontextprotocol/sdk': https://codeload.github.com/edgeandnode/mcp-typescript-sdk/tar.gz/2de06543904483073d8cc13db1d0e08e16601081
+      '@modelcontextprotocol/sdk': '@ampersend_ai/modelcontextprotocol-sdk@1.20.1'
       '@rhinestone/module-sdk': 0.4.0(viem@2.45.0(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@3.25.76))
       '@types/express': 5.0.6
-      async-mutex: 0.5.0
-      commander: 12.1.0
-      effect: 3.19.15
-      express: 5.2.1
-      fastmcp: https://codeload.github.com/edgeandnode/fastmcp/tar.gz/6446ea7b56eb291a6d4d7321e4a41ff0aacba1ef(effect@3.19.15)
-      siwe: 3.0.0(ethers@6.16.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))
-      viem: 2.45.0(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@3.25.76)
-      x402: 0.6.6(@solana/sysvars@3.0.3(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3))(@tanstack/query-core@5.90.7)(@tanstack/react-query@5.90.7(react@18.3.1))(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(react@18.3.1)(typescript@5.9.3)(utf-8-validate@5.0.10)(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))
-      zod: 3.25.76
-    optionalDependencies:
       '@x402/core': 2.2.0
-    transitivePeerDependencies:
-      - '@azure/app-configuration'
-      - '@azure/cosmos'
-      - '@azure/data-tables'
-      - '@azure/identity'
-      - '@azure/keyvault-secrets'
-      - '@azure/storage-blob'
-      - '@capacitor/preferences'
-      - '@deno/kv'
-      - '@netlify/blobs'
-      - '@planetscale/database'
-      - '@react-native-async-storage/async-storage'
-      - '@solana/sysvars'
-      - '@tanstack/query-core'
-      - '@tanstack/react-query'
-      - '@types/react'
-      - '@upstash/redis'
-      - '@vercel/blob'
-      - '@vercel/functions'
-      - '@vercel/kv'
-      - aws4fetch
-      - bufferutil
-      - db0
-      - debug
-      - encoding
-      - ethers
-      - expo-auth-session
-      - expo-crypto
-      - expo-web-browser
-      - fastestsmallesttextencoderdecoder
-      - immer
-      - ioredis
-      - react
-      - react-native
-      - supports-color
-      - typescript
-      - uploadthing
-      - utf-8-validate
-      - ws
-
-  '@ampersend_ai/ampersend-sdk@0.0.6(@x402/core@2.2.0)(bufferutil@4.0.9)(ethers@6.16.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(fastmcp@https://codeload.github.com/edgeandnode/fastmcp/tar.gz/6446ea7b56eb291a6d4d7321e4a41ff0aacba1ef(effect@3.19.15))(react@18.3.1)(typescript@5.9.3)(utf-8-validate@5.0.10)(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))':
-    dependencies:
-      '@modelcontextprotocol/sdk': https://codeload.github.com/edgeandnode/mcp-typescript-sdk/tar.gz/2de06543904483073d8cc13db1d0e08e16601081
-      '@rhinestone/module-sdk': 0.4.0(viem@2.45.0(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@3.25.76))
-      '@types/express': 5.0.6
       async-mutex: 0.5.0
       commander: 12.1.0
       effect: 3.19.15
       express: 5.2.1
-      fastmcp: https://codeload.github.com/edgeandnode/fastmcp/tar.gz/6446ea7b56eb291a6d4d7321e4a41ff0aacba1ef(effect@3.19.15)
+      fastmcp: '@ampersend_ai/fastmcp@1.0.0(effect@3.19.15)'
       siwe: 3.0.0(ethers@6.16.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))
       viem: 2.45.0(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@3.25.76)
       x402: 0.6.6(bufferutil@4.0.9)(react@18.3.1)(typescript@5.9.3)(utf-8-validate@5.0.10)(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))
       zod: 3.25.76
-    optionalDependencies:
-      '@x402/core': 2.2.0
     transitivePeerDependencies:
       - '@azure/app-configuration'
       - '@azure/cosmos'
@@ -4452,9 +4361,11 @@ snapshots:
       - '@tanstack/react-query'
       - '@types/react'
       - '@upstash/redis'
+      - '@valibot/to-json-schema'
       - '@vercel/blob'
       - '@vercel/functions'
       - '@vercel/kv'
+      - arktype
       - aws4fetch
       - bufferutil
       - db0
@@ -4470,10 +4381,50 @@ snapshots:
       - react
       - react-native
       - supports-color
+      - sury
       - typescript
       - uploadthing
       - utf-8-validate
       - ws
+
+  '@ampersend_ai/fastmcp@1.0.0(effect@3.19.15)':
+    dependencies:
+      '@modelcontextprotocol/sdk': '@ampersend_ai/modelcontextprotocol-sdk@1.20.1'
+      '@standard-schema/spec': 1.1.0
+      execa: 9.6.0
+      file-type: 21.0.0
+      fuse.js: 7.1.0
+      mcp-proxy: 5.10.0
+      strict-event-emitter-types: 2.0.0
+      undici: 7.16.0
+      uri-templates: 0.2.0
+      xsschema: 0.4.0-beta.5(effect@3.19.15)(zod-to-json-schema@3.24.6(zod@3.25.76))(zod@3.25.76)
+      yargs: 18.0.0
+      zod: 3.25.76
+      zod-to-json-schema: 3.24.6(zod@3.25.76)
+    transitivePeerDependencies:
+      - '@valibot/to-json-schema'
+      - arktype
+      - effect
+      - supports-color
+      - sury
+
+  '@ampersend_ai/modelcontextprotocol-sdk@1.20.1':
+    dependencies:
+      ajv: 6.12.6
+      content-type: 1.0.5
+      cors: 2.8.5
+      cross-spawn: 7.0.6
+      eventsource: 3.0.7
+      eventsource-parser: 3.0.6
+      express: 5.2.1
+      express-rate-limit: 7.5.1(express@5.2.1)
+      pkce-challenge: 5.0.0
+      raw-body: 3.0.1
+      zod: 3.25.76
+      zod-to-json-schema: 3.24.6(zod@3.25.76)
+    transitivePeerDependencies:
+      - supports-color
 
   '@babel/code-frame@7.27.1':
     dependencies:
@@ -4981,20 +4932,6 @@ snapshots:
       '@langchain/core': 1.1.17(openai@6.8.1(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(zod@4.1.12))
       react: 18.3.1
 
-  '@langchain/langgraph@1.1.2(@langchain/core@1.1.17(openai@6.8.1(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(zod@4.1.12)))(react@18.3.1)(zod-to-json-schema@3.24.6(zod@3.25.76))(zod@4.1.12)':
-    dependencies:
-      '@langchain/core': 1.1.17(openai@6.8.1(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(zod@4.1.12))
-      '@langchain/langgraph-checkpoint': 1.0.0(@langchain/core@1.1.17(openai@6.8.1(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(zod@4.1.12)))
-      '@langchain/langgraph-sdk': 1.5.5(@langchain/core@1.1.17(openai@6.8.1(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(zod@4.1.12)))(react@18.3.1)
-      '@standard-schema/spec': 1.1.0
-      uuid: 10.0.0
-      zod: 4.1.12
-    optionalDependencies:
-      zod-to-json-schema: 3.24.6(zod@4.1.12)
-    transitivePeerDependencies:
-      - react
-      - react-dom
-
   '@langchain/langgraph@1.1.2(@langchain/core@1.1.17(openai@6.8.1(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(zod@4.1.12)))(react@18.3.1)(zod-to-json-schema@3.24.6(zod@4.1.12))(zod@3.25.76)':
     dependencies:
       '@langchain/core': 1.1.17(openai@6.8.1(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(zod@4.1.12))
@@ -5009,10 +4946,24 @@ snapshots:
       - react
       - react-dom
 
-  '@langchain/mcp-adapters@1.0.0(@cfworker/json-schema@4.1.1)(@langchain/core@1.1.17(openai@6.8.1(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(zod@4.1.12)))(@langchain/langgraph@1.1.2(@langchain/core@1.1.17(openai@6.8.1(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(zod@4.1.12)))(react@18.3.1)(zod-to-json-schema@3.24.6(zod@3.25.76))(zod@4.1.12))':
+  '@langchain/langgraph@1.1.2(@langchain/core@1.1.17(openai@6.8.1(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(zod@4.1.12)))(react@18.3.1)(zod-to-json-schema@3.24.6(zod@4.1.12))(zod@4.1.12)':
     dependencies:
       '@langchain/core': 1.1.17(openai@6.8.1(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(zod@4.1.12))
-      '@langchain/langgraph': 1.1.2(@langchain/core@1.1.17(openai@6.8.1(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(zod@4.1.12)))(react@18.3.1)(zod-to-json-schema@3.24.6(zod@3.25.76))(zod@4.1.12)
+      '@langchain/langgraph-checkpoint': 1.0.0(@langchain/core@1.1.17(openai@6.8.1(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(zod@4.1.12)))
+      '@langchain/langgraph-sdk': 1.5.5(@langchain/core@1.1.17(openai@6.8.1(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(zod@4.1.12)))(react@18.3.1)
+      '@standard-schema/spec': 1.1.0
+      uuid: 10.0.0
+      zod: 4.1.12
+    optionalDependencies:
+      zod-to-json-schema: 3.24.6(zod@4.1.12)
+    transitivePeerDependencies:
+      - react
+      - react-dom
+
+  '@langchain/mcp-adapters@1.0.0(@cfworker/json-schema@4.1.1)(@langchain/core@1.1.17(openai@6.8.1(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(zod@4.1.12)))(@langchain/langgraph@1.1.2(@langchain/core@1.1.17(openai@6.8.1(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(zod@4.1.12)))(react@18.3.1)(zod-to-json-schema@3.24.6(zod@4.1.12))(zod@4.1.12))':
+    dependencies:
+      '@langchain/core': 1.1.17(openai@6.8.1(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(zod@4.1.12))
+      '@langchain/langgraph': 1.1.2(@langchain/core@1.1.17(openai@6.8.1(ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(zod@4.1.12)))(react@18.3.1)(zod-to-json-schema@3.24.6(zod@4.1.12))(zod@4.1.12)
       '@modelcontextprotocol/sdk': 1.21.1(@cfworker/json-schema@4.1.1)
       debug: 4.4.3
       zod: 3.25.76
@@ -5239,23 +5190,6 @@ snapshots:
       zod-to-json-schema: 3.24.6(zod@3.25.76)
     optionalDependencies:
       '@cfworker/json-schema': 4.1.1
-    transitivePeerDependencies:
-      - supports-color
-
-  '@modelcontextprotocol/sdk@https://codeload.github.com/edgeandnode/mcp-typescript-sdk/tar.gz/2de06543904483073d8cc13db1d0e08e16601081':
-    dependencies:
-      ajv: 6.12.6
-      content-type: 1.0.5
-      cors: 2.8.5
-      cross-spawn: 7.0.6
-      eventsource: 3.0.7
-      eventsource-parser: 3.0.6
-      express: 5.1.0
-      express-rate-limit: 7.5.1(express@5.1.0)
-      pkce-challenge: 5.0.0
-      raw-body: 3.0.1
-      zod: 3.25.76
-      zod-to-json-schema: 3.24.6(zod@3.25.76)
     transitivePeerDependencies:
       - supports-color
 
@@ -8149,45 +8083,9 @@ snapshots:
 
   expect-type@1.2.2: {}
 
-  express-rate-limit@7.5.1(express@5.1.0):
-    dependencies:
-      express: 5.1.0
-
   express-rate-limit@7.5.1(express@5.2.1):
     dependencies:
       express: 5.2.1
-
-  express@5.1.0:
-    dependencies:
-      accepts: 2.0.0
-      body-parser: 2.2.1
-      content-disposition: 1.0.0
-      content-type: 1.0.5
-      cookie: 0.7.2
-      cookie-signature: 1.2.2
-      debug: 4.4.3
-      encodeurl: 2.0.0
-      escape-html: 1.0.3
-      etag: 1.8.1
-      finalhandler: 2.1.0
-      fresh: 2.0.0
-      http-errors: 2.0.0
-      merge-descriptors: 2.0.0
-      mime-types: 3.0.1
-      on-finished: 2.4.1
-      once: 1.4.0
-      parseurl: 1.3.3
-      proxy-addr: 2.0.7
-      qs: 6.14.0
-      range-parser: 1.2.1
-      router: 2.2.0
-      send: 1.2.0
-      serve-static: 2.2.0
-      statuses: 2.0.2
-      type-is: 2.0.1
-      vary: 1.1.2
-    transitivePeerDependencies:
-      - supports-color
 
   express@5.2.1:
     dependencies:
@@ -8251,50 +8149,6 @@ snapshots:
   fast-uri@3.1.0: {}
 
   fastestsmallesttextencoderdecoder@1.0.22: {}
-
-  fastmcp@https://codeload.github.com/edgeandnode/fastmcp/tar.gz/358855f0fb94c9537fd0f1c71c6ccb2a92725218(effect@3.19.15):
-    dependencies:
-      '@modelcontextprotocol/sdk': https://codeload.github.com/edgeandnode/mcp-typescript-sdk/tar.gz/2de06543904483073d8cc13db1d0e08e16601081
-      '@standard-schema/spec': 1.0.0
-      execa: 9.6.0
-      file-type: 21.0.0
-      fuse.js: 7.1.0
-      mcp-proxy: 5.10.0
-      strict-event-emitter-types: 2.0.0
-      undici: 7.16.0
-      uri-templates: 0.2.0
-      xsschema: 0.4.0-beta.5(effect@3.19.15)(zod-to-json-schema@3.24.6(zod@3.25.76))(zod@3.25.76)
-      yargs: 18.0.0
-      zod: 3.25.76
-      zod-to-json-schema: 3.24.6(zod@3.25.76)
-    transitivePeerDependencies:
-      - '@valibot/to-json-schema'
-      - arktype
-      - effect
-      - supports-color
-      - sury
-
-  fastmcp@https://codeload.github.com/edgeandnode/fastmcp/tar.gz/6446ea7b56eb291a6d4d7321e4a41ff0aacba1ef(effect@3.19.15):
-    dependencies:
-      '@modelcontextprotocol/sdk': https://codeload.github.com/edgeandnode/mcp-typescript-sdk/tar.gz/2de06543904483073d8cc13db1d0e08e16601081
-      '@standard-schema/spec': 1.0.0
-      execa: 9.6.0
-      file-type: 21.0.0
-      fuse.js: 7.1.0
-      mcp-proxy: 5.10.0
-      strict-event-emitter-types: 2.0.0
-      undici: 7.16.0
-      uri-templates: 0.2.0
-      xsschema: 0.4.0-beta.5(effect@3.19.15)(zod-to-json-schema@3.24.6(zod@3.25.76))(zod@3.25.76)
-      yargs: 18.0.0
-      zod: 3.25.76
-      zod-to-json-schema: 3.24.6(zod@4.1.12)
-    transitivePeerDependencies:
-      - '@valibot/to-json-schema'
-      - arktype
-      - effect
-      - supports-color
-      - sury
 
   fdir@6.5.0(picomatch@4.0.3):
     optionalDependencies:
@@ -10072,6 +9926,7 @@ snapshots:
   zod-to-json-schema@3.24.6(zod@4.1.12):
     dependencies:
       zod: 4.1.12
+    optional: true
 
   zod@3.22.4: {}
 

@@ -1,6 +1,5 @@
-import { withX402Payment, type OnPayment } from "@ampersend_ai/ampersend-sdk/mcp/server/fastmcp"
+import { FastMCP, withX402Payment, type OnPayment } from "@ampersend_ai/ampersend-sdk/mcp/server/fastmcp"
 import { facilitator } from "@coinbase/x402"
-import { FastMCP } from "fastmcp"
 import type { FacilitatorConfig, PaymentRequirements } from "x402/types"
 import { useFacilitator } from "x402/verify"
 import { z } from "zod"

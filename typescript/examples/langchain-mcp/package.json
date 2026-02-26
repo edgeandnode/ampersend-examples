@@ -14,9 +14,7 @@
     "format:fix": "prettier . --write --list-different --ignore-path ../../.prettierignore"
   },
   "dependencies": {
-    "@ampersend_ai/ampersend-sdk": "0.0.6",
-    "fastmcp": "github:edgeandnode/fastmcp#6446ea7b56eb291a6d4d7321e4a41ff0aacba1ef",
-    "@modelcontextprotocol/sdk": "github:edgeandnode/mcp-typescript-sdk#2de06543904483073d8cc13db1d0e08e16601081",
+    "@ampersend_ai/ampersend-sdk": "0.0.9",
     "@langchain/core": "^1.0.0",
     "@langchain/openai": "^1.0.0",
     "@langchain/langgraph": "^1.0.0",

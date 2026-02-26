@@ -31,8 +31,7 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@ampersend_ai/ampersend-sdk": "0.0.6",
-    "fastmcp": "github:edgeandnode/fastmcp#358855f0fb94c9537fd0f1c71c6ccb2a92725218",
+    "@ampersend_ai/ampersend-sdk": "0.0.9",
     "@coinbase/x402": "^0.6.6",
     "x402": "^0.6.6",
     "zod": "^3.24.2"
