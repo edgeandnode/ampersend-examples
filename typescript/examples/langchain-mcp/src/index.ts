@@ -8,10 +8,10 @@
  */
 
 import { createAmpersendMcpClient } from "@ampersend_ai/ampersend-sdk"
+import { StreamableHTTPClientTransport } from "@ampersend_ai/ampersend-sdk/mcp/client"
 import { createReactAgent } from "@langchain/langgraph/prebuilt"
 import { loadMcpTools } from "@langchain/mcp-adapters"
 import { ChatOpenAI } from "@langchain/openai"
-import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/streamableHttp.js"
 import type { Address, Hex } from "viem"
 
 // Environment variables with defaults
@@ -50,11 +50,12 @@ async function main() {
     smartAccountAddress,
     sessionKeyPrivateKey,
     apiUrl: AMPERSEND_API_URL,
+    chainId: 84532, // Base Sepolia (explicit for staging API)
   })
 
   // Connect to MCP server
   const transport = new StreamableHTTPClientTransport(new URL(MCP_SERVER_URL))
-  await client.connect(transport as any)
+  await client.connect(transport as any) // Type mismatch with exactOptionalPropertyTypes
   console.log(`Connected to MCP server: ${MCP_SERVER_URL}`)
 
   try {
