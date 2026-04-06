@@ -15,7 +15,7 @@ Get started in minutes with free testnet:
 
 ### 1. Create Agent Account
 
-1. Visit **<https://app.staging.ampersend.ai>**
+1. Visit **<https://app.sandbox.ampersend.ai>**
 2. Create an agent account
 3. Get your **Smart Account address** and **session key**
 4. Fund with testnet USDC: **<https://faucet.circle.com/>** (select Base Sepolia)
@@ -34,13 +34,13 @@ uv sync
 # Smart Account (recommended - with spend limits)
 export EXAMPLES_A2A_BUYER__SMART_ACCOUNT_ADDRESS=0x...  # From ampersend dashboard
 export EXAMPLES_A2A_BUYER__SESSION_KEY_PRIVATE_KEY=0x...  # From ampersend dashboard
-export EXAMPLES_A2A_BUYER__AMPERSEND_API_URL=https://api.staging.ampersend.ai
+export EXAMPLES_A2A_BUYER__AMPERSEND_API_URL=https://api.sandbox.ampersend.ai
 ```
 
 ### 4. Run an Example
 
 ```bash
-# Try the A2A buyer example (connects to staging subgraph service)
+# Try the A2A buyer example (connects to sandbox subgraph service)
 uv --directory=python/examples run -- adk run src/examples/a2a/buyer/adk
 ```
 
@@ -61,7 +61,7 @@ The agent automatically handles the payment flow to query the data. You just mad
 
 3. Use production endpoints (see examples below)
 
-**Note**: Production uses Base mainnet with real USDC. Staging services are rate-limited and for testing only.
+**Note**: Production uses Base mainnet with real USDC. Sandbox services are rate-limited and for testing only.
 
 ---
 
@@ -79,10 +79,10 @@ Connect directly to The Graph's subgraph A2A service and let the SDK handle paym
 **Run**:
 
 ```bash
-# Testnet (staging)
+# Testnet (sandbox)
 export EXAMPLES_A2A_BUYER__SMART_ACCOUNT_ADDRESS=0x...
 export EXAMPLES_A2A_BUYER__SESSION_KEY_PRIVATE_KEY=0x...
-export EXAMPLES_A2A_BUYER__AMPERSEND_API_URL=https://api.staging.ampersend.ai
+export EXAMPLES_A2A_BUYER__AMPERSEND_API_URL=https://api.sandbox.ampersend.ai
 
 # Option 1: Interactive CLI
 uv --directory=python/examples run -- adk run src/examples/a2a/buyer/adk
@@ -94,7 +94,7 @@ uv --directory=python/examples run -- adk web src/examples/a2a/buyer
 **Features**:
 
 - Smart Account with spend limits via ampersend
-- Defaults to staging subgraph service
+- Defaults to sandbox subgraph service
 
 ### 2. A2A Local Orchestrator
 
@@ -105,10 +105,10 @@ Build a local agent that can discover and delegate to multiple specialized remot
 **Run**:
 
 ```bash
-# Testnet (staging)
+# Testnet (sandbox)
 export EXAMPLES_A2A_BUYER__SMART_ACCOUNT_ADDRESS=0x...
 export EXAMPLES_A2A_BUYER__SESSION_KEY_PRIVATE_KEY=0x...
-export EXAMPLES_A2A_BUYER__AMPERSEND_API_URL=https://api.staging.ampersend.ai
+export EXAMPLES_A2A_BUYER__AMPERSEND_API_URL=https://api.sandbox.ampersend.ai
 export GOOGLE_API_KEY=...  # Get from https://aistudio.google.com/apikey
 
 # Optional: Add more remote agents
@@ -148,12 +148,12 @@ Use MCP tools through a proxy that handles x402 payments transparently.
 # 1. Start MCP proxy (separate terminal)
 export BUYER_SMART_ACCOUNT_ADDRESS=0x...
 export BUYER_SESSION_KEY_PRIVATE_KEY=0x...
-export AMPERSEND_API_URL=https://api.staging.ampersend.ai
+export AMPERSEND_API_URL=https://api.sandbox.ampersend.ai
 ampersend-proxy  # Runs on http://localhost:8402
 
 # 2. Run MCP buyer
 export EXAMPLE_BUYER__MCP__PROXY_URL=http://localhost:8402/mcp
-export EXAMPLE_BUYER__MCP__TARGET_SERVER_URL=https://subgraph-mcp.x402.staging.ampersend.ai
+export EXAMPLE_BUYER__MCP__TARGET_SERVER_URL=https://subgraph-mcp.x402.sandbox.thegraph.com
 
 # Option 1: Interactive CLI
 uv --directory=python/examples run -- adk run src/examples/mcp/buyer/adk
@@ -195,15 +195,15 @@ See [Environment Variables Reference](./docs/environment-variables.md) for compl
 ```bash
 EXAMPLES_A2A_BUYER__SMART_ACCOUNT_ADDRESS=0x...
 EXAMPLES_A2A_BUYER__SESSION_KEY_PRIVATE_KEY=0x...
-EXAMPLES_A2A_BUYER__AMPERSEND_API_URL=https://api.staging.ampersend.ai
+EXAMPLES_A2A_BUYER__AMPERSEND_API_URL=https://api.sandbox.ampersend.ai
 ```
 
-**Service URLs** (optional, defaults to staging):
+**Service URLs** (optional, defaults to sandbox):
 
 ```bash
-EXAMPLES_A2A_BUYER__SELLER_AGENT_URL=https://subgraph-a2a.x402.staging.thegraph.com
-EXAMPLES_A2A_BUYER__AGENT_URL_1=https://subgraph-a2a.x402.staging.thegraph.com
-EXAMPLE_BUYER__MCP__TARGET_SERVER_URL=https://subgraph-mcp.x402.staging.ampersend.ai
+EXAMPLES_A2A_BUYER__SELLER_AGENT_URL=https://subgraph-a2a.x402.sandbox.thegraph.com
+EXAMPLES_A2A_BUYER__AGENT_URL_1=https://subgraph-a2a.x402.sandbox.thegraph.com
+EXAMPLE_BUYER__MCP__TARGET_SERVER_URL=https://subgraph-mcp.x402.sandbox.thegraph.com
 ```
 
 ---
@@ -295,7 +295,7 @@ uv sync
 **Solution**: Check `EXAMPLES_A2A_BUYER__AGENT_URL_1` is set and accessible:
 
 ```bash
-curl https://subgraph-a2a.x402.staging.thegraph.com/.well-known/agent-card.json
+curl https://subgraph-a2a.x402.sandbox.thegraph.com/.well-known/agent-card.json
 ```
 
 ### MCP Proxy Connection Refused

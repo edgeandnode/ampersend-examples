@@ -20,7 +20,7 @@ async function main() {
   const client = createAmpersendHttpClient({
     smartAccountAddress,
     sessionKeyPrivateKey: sessionKey,
-    apiUrl: "https://api.staging.ampersend.ai",
+    apiUrl: "https://api.sandbox.ampersend.ai",
     network: "base-sepolia",
   })
 

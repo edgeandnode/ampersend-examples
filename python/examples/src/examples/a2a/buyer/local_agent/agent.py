@@ -5,7 +5,7 @@ remote A2A agents as tools. The local agent can delegate tasks to specialized
 remote agents with automatic x402 payment handling.
 
 Getting Started (Testnet):
-    1. Create agent account at https://app.staging.ampersend.ai
+    1. Create agent account at https://app.sandbox.ampersend.ai
     2. Fund with testnet USDC: https://faucet.circle.com/ (Base Sepolia)
     3. Get Google API key from https://aistudio.google.com/apikey
     4. Set environment variables:
@@ -22,9 +22,9 @@ Environment Variables:
     EXAMPLES_A2A_BUYER__SMART_ACCOUNT_ADDRESS: Agent smart account address (from dashboard)
     EXAMPLES_A2A_BUYER__SESSION_KEY_PRIVATE_KEY: Session key (from dashboard)
     EXAMPLES_A2A_BUYER__AMPERSEND_API_URL: ampersend API URL
-        Default: https://api.staging.ampersend.ai
+        Default: https://api.sandbox.ampersend.ai
     EXAMPLES_A2A_BUYER__AGENT_URL_1: First remote agent URL
-        Default: https://subgraph-a2a.x402.staging.thegraph.com
+        Default: https://subgraph-a2a.x402.sandbox.thegraph.com
     EXAMPLES_A2A_BUYER__AGENT_URL_2: Second remote agent URL (optional)
 
 Example Usage:
@@ -47,11 +47,11 @@ import os
 from ampersend_sdk import create_ampersend_toolset
 from google.adk import Agent
 
-# Configure remote agents (defaults to staging)
+# Configure remote agents (defaults to sandbox)
 _remote_agent_urls = [
     os.environ.get(
         "EXAMPLES_A2A_BUYER__AGENT_URL_1",
-        "https://subgraph-a2a.x402.staging.thegraph.com",
+        "https://subgraph-a2a.x402.sandbox.thegraph.com",
     )
 ]
 
@@ -66,7 +66,7 @@ toolset = create_ampersend_toolset(
     session_key_private_key=os.environ["EXAMPLES_A2A_BUYER__SESSION_KEY_PRIVATE_KEY"],
     api_url=os.environ.get(
         "EXAMPLES_A2A_BUYER__AMPERSEND_API_URL",
-        "https://api.staging.ampersend.ai",
+        "https://api.sandbox.ampersend.ai",
     ),
 )
 

@@ -13,18 +13,18 @@ Prerequisites:
 Environment Variables:
     EXAMPLE_BUYER__MCP__PROXY_URL: MCP proxy URL (e.g., http://localhost:8402/mcp)
     EXAMPLE_BUYER__MCP__TARGET_SERVER_URL: Target MCP server URL
-        Default: https://subgraph-mcp.x402.staging.ampersend.ai (testnet)
+        Default: https://subgraph-mcp.x402.sandbox.thegraph.com (sandbox/testnet)
 
 Example:
     # Start proxy (in separate terminal)
     export BUYER_SMART_ACCOUNT_ADDRESS=0x...
     export BUYER_SMART_ACCOUNT_KEY_PRIVATE_KEY=0x...
-    export AMPERSEND_API_URL=https://api.staging.ampersend.ai
+    export AMPERSEND_API_URL=https://api.sandbox.ampersend.ai
     ampersend-proxy
 
     # Run this buyer agent
     export EXAMPLE_BUYER__MCP__PROXY_URL=http://localhost:8402/mcp
-    export EXAMPLE_BUYER__MCP__TARGET_SERVER_URL=https://subgraph-mcp.x402.staging.ampersend.ai
+    export EXAMPLE_BUYER__MCP__TARGET_SERVER_URL=https://subgraph-mcp.x402.sandbox.thegraph.com
     uv --directory=python/examples run -- adk run src/examples/mcp/buyer/adk
 """
 
@@ -38,7 +38,7 @@ from google.adk.tools.mcp_tool.mcp_toolset import McpToolset
 _proxy_url = os.environ["EXAMPLE_BUYER__MCP__PROXY_URL"]
 _target_server_url = os.environ.get(
     "EXAMPLE_BUYER__MCP__TARGET_SERVER_URL",
-    "https://subgraph-mcp.x402.staging.ampersend.ai",
+    "https://subgraph-mcp.x402.sandbox.thegraph.com",
 )
 
 root_agent = Agent(
