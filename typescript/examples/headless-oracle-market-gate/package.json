@@ -1,0 +1,37 @@
+{
+  "name": "@edgeandnode/headless-oracle-market-gate",
+  "description": "Ampersend agent using Headless Oracle x402 market attestations as a pre-trade safety gate",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -b tsconfig.json",
+    "clean": "rm -rf dist .tsbuildinfo",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier . --check --ignore-path ../../.prettierignore",
+    "format:fix": "prettier . --write --list-different --ignore-path ../../.prettierignore"
+  },
+  "dependencies": {
+    "@ampersend_ai/ampersend-sdk": "0.0.9",
+    "@x402/fetch": "^2.1.0",
+    "x402": "^0.6.6"
+  },
+  "devDependencies": {
+    "tsx": "^4.21.0"
+  }
+}
