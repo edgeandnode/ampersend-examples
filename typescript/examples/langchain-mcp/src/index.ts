@@ -16,11 +16,11 @@ import type { Address, Hex } from "viem"
 
 // Environment variables with defaults
 const MCP_SERVER_URL =
-  process.env.TS__EXAMPLES__LANGCHAIN_MCP__MCP_SERVER_URL ?? "https://subgraph-mcp.x402.staging.thegraph.com/mcp"
+  process.env.TS__EXAMPLES__LANGCHAIN_MCP__MCP_SERVER_URL ?? "https://subgraph-mcp.x402.sandbox.thegraph.com/mcp"
 const SMART_ACCOUNT_ADDRESS = process.env.TS__EXAMPLES__LANGCHAIN_MCP__SMART_ACCOUNT_ADDRESS
 const SESSION_KEY_PRIVATE_KEY = process.env.TS__EXAMPLES__LANGCHAIN_MCP__SESSION_KEY_PRIVATE_KEY
 const AMPERSEND_API_URL =
-  process.env.TS__EXAMPLES__LANGCHAIN_MCP__AMPERSEND_API_URL ?? "https://api.staging.ampersend.ai"
+  process.env.TS__EXAMPLES__LANGCHAIN_MCP__AMPERSEND_API_URL ?? "https://api.sandbox.ampersend.ai"
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY
 
 if (!SMART_ACCOUNT_ADDRESS || !SESSION_KEY_PRIVATE_KEY || !OPENAI_API_KEY) {
@@ -50,7 +50,7 @@ async function main() {
     smartAccountAddress,
     sessionKeyPrivateKey,
     apiUrl: AMPERSEND_API_URL,
-    chainId: 84532, // Base Sepolia (explicit for staging API)
+    chainId: 84532, // Base Sepolia (explicit for sandbox API)
   })
 
   // Connect to MCP server

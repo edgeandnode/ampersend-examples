@@ -4,7 +4,7 @@ This example demonstrates connecting directly to a remote A2A agent
 with automatic x402 payment handling via ampersend.
 
 Getting Started (Testnet):
-    1. Create agent account at https://app.staging.ampersend.ai
+    1. Create agent account at https://app.sandbox.ampersend.ai
     2. Fund with testnet USDC: https://faucet.circle.com/ (Base Sepolia)
     3. Set environment variables:
         export EXAMPLES_A2A_BUYER__SMART_ACCOUNT_ADDRESS=0x...
@@ -17,9 +17,9 @@ Environment Variables:
     EXAMPLES_A2A_BUYER__SMART_ACCOUNT_ADDRESS: Agent smart account address (from dashboard)
     EXAMPLES_A2A_BUYER__SESSION_KEY_PRIVATE_KEY: Session key (from dashboard)
     EXAMPLES_A2A_BUYER__AMPERSEND_API_URL: ampersend API URL
-        Default: https://api.staging.ampersend.ai
+        Default: https://api.sandbox.ampersend.ai
     EXAMPLES_A2A_BUYER__SELLER_AGENT_URL: Remote agent URL
-        Default: https://subgraph-a2a.x402.staging.thegraph.com
+        Default: https://subgraph-a2a.x402.sandbox.thegraph.com
 """
 
 import os
@@ -34,14 +34,14 @@ _treasurer = create_ampersend_treasurer(
     session_key_private_key=os.environ["EXAMPLES_A2A_BUYER__SESSION_KEY_PRIVATE_KEY"],
     api_url=os.environ.get(
         "EXAMPLES_A2A_BUYER__AMPERSEND_API_URL",
-        "https://api.staging.ampersend.ai",
+        "https://api.sandbox.ampersend.ai",
     ),
 )
 
-# Get seller agent URL (defaults to staging)
+# Get seller agent URL (defaults to sandbox)
 _agent_url = os.environ.get(
     "EXAMPLES_A2A_BUYER__SELLER_AGENT_URL",
-    "https://subgraph-a2a.x402.staging.thegraph.com",
+    "https://subgraph-a2a.x402.sandbox.thegraph.com",
 )
 
 root_agent = X402RemoteA2aAgent(

@@ -9,7 +9,7 @@ Example showing how to use LangChain agents with x402-enabled MCP servers and am
 
 ## Getting Started (Testnet)
 
-1. **Create agent account** at https://app.staging.ampersend.ai
+1. **Create agent account** at https://app.sandbox.ampersend.ai
 2. **Fund with testnet USDC**: https://faucet.circle.com/ (Base Sepolia)
 3. **Set environment variables**:
    ```bash
@@ -40,8 +40,8 @@ Example showing how to use LangChain agents with x402-enabled MCP servers and am
 
 | Variable                                         | Default                                              | Description       |
 | ------------------------------------------------ | ---------------------------------------------------- | ----------------- |
-| `TS__EXAMPLES__LANGCHAIN_MCP__MCP_SERVER_URL`    | `https://subgraph-mcp.x402.staging.thegraph.com/mcp` | MCP server URL    |
-| `TS__EXAMPLES__LANGCHAIN_MCP__AMPERSEND_API_URL` | `https://api.staging.ampersend.ai`                   | ampersend API URL |
+| `TS__EXAMPLES__LANGCHAIN_MCP__MCP_SERVER_URL`    | `https://subgraph-mcp.x402.sandbox.thegraph.com/mcp` | MCP server URL    |
+| `TS__EXAMPLES__LANGCHAIN_MCP__AMPERSEND_API_URL` | `https://api.sandbox.ampersend.ai`                   | ampersend API URL |
 
 ## Run
 

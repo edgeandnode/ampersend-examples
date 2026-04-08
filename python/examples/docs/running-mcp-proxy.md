@@ -37,19 +37,19 @@ pnpm add -g @ampersend_ai/ampersend-sdk
 The proxy uses environment variables with an optional prefix. By default, `pnpm proxy:dev` uses the `TS__MCP_PROXY__`
 prefix. You can disable the prefix with `--env-prefix ""`.
 
-**Recommended: Smart Account with ampersend** (from app.staging.ampersend.ai for testnet, app.ampersend.ai for
+**Recommended: Smart Account with ampersend** (from app.sandbox.ampersend.ai for testnet, app.ampersend.ai for
 production)
 
 ```bash
 # With default prefix (for pnpm proxy:dev)
 export TS__MCP_PROXY__BUYER_SMART_ACCOUNT_ADDRESS=0x...           # From ampersend dashboard
 export TS__MCP_PROXY__BUYER_SMART_ACCOUNT_KEY_PRIVATE_KEY=0x...  # From ampersend dashboard
-export TS__MCP_PROXY__AMPERSEND_API_URL=https://api.staging.ampersend.ai
+export TS__MCP_PROXY__AMPERSEND_API_URL=https://api.sandbox.ampersend.ai
 
 # OR without prefix (use --env-prefix "")
 export BUYER_SMART_ACCOUNT_ADDRESS=0x...
 export BUYER_SMART_ACCOUNT_KEY_PRIVATE_KEY=0x...
-export AMPERSEND_API_URL=https://api.staging.ampersend.ai
+export AMPERSEND_API_URL=https://api.sandbox.ampersend.ai
 ```
 
 **Standalone Alternative: EOA (No ampersend)**
@@ -74,7 +74,7 @@ The proxy starts on **http://localhost:8402** by default.
 
 ```bash
 # Proxy URL with target parameter
-http://localhost:8402/mcp?target=https://subgraph-mcp.x402.staging.ampersend.ai
+http://localhost:8402/mcp?target=https://subgraph-mcp.x402.sandbox.thegraph.com
 ```
 
 ## Environment Variables
@@ -88,7 +88,7 @@ http://localhost:8402/mcp?target=https://subgraph-mcp.x402.staging.ampersend.ai
 ```bash
 BUYER_SMART_ACCOUNT_ADDRESS=0x...           # Your agent's smart account
 BUYER_SMART_ACCOUNT_KEY_PRIVATE_KEY=0x...  # Session key from dashboard
-AMPERSEND_API_URL=https://api.staging.ampersend.ai  # For spend limits & monitoring
+AMPERSEND_API_URL=https://api.sandbox.ampersend.ai  # For spend limits & monitoring
 ```
 
 **EOA + Naive (Standalone)**:
@@ -139,7 +139,7 @@ export AMPERSEND_API_URL=https://api.ampersend.ai  # Production
 http://localhost:8402/mcp?target=https://subgraph-mcp.x402.thegraph.com
 ```
 
-**Important**: Staging services are rate-limited. For production workloads, use production endpoints.
+**Important**: Sandbox services are rate-limited. For production workloads, use production endpoints.
 
 ## Troubleshooting
 
@@ -171,7 +171,7 @@ http://localhost:8402/mcp?target=https://subgraph-mcp.x402.thegraph.com
 
 - Verify target URL is correct
 - Check server is running: `curl <target-url>/mcp`
-- Try staging server: `https://subgraph-mcp.x402.staging.ampersend.ai`
+- Try sandbox server: `https://subgraph-mcp.x402.sandbox.thegraph.com`
 
 ## CLI Reference
 

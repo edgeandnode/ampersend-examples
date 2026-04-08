@@ -5,7 +5,7 @@ with spend limits.
 
 ## Prerequisites
 
-- ampersend smart account (create at https://app.staging.ampersend.ai)
+- ampersend smart account (create at https://app.sandbox.ampersend.ai)
 - Testnet USDC (get from https://faucet.circle.com/ for Base Sepolia)
 - OpenAI API key
 
@@ -21,8 +21,8 @@ uv sync
 
 - `EXAMPLES_LANGCHAIN_A2A_BUYER__SMART_ACCOUNT_ADDRESS`: Smart account address (from ampersend dashboard)
 - `EXAMPLES_LANGCHAIN_A2A_BUYER__SESSION_KEY_PRIVATE_KEY`: Session key private key (from dashboard)
-- `EXAMPLES_LANGCHAIN_A2A_BUYER__AMPERSEND_API_URL`: ampersend API URL (defaults to staging)
-- `EXAMPLES_LANGCHAIN_A2A_BUYER__SELLER_URL`: Remote A2A agent URL (defaults to staging)
+- `EXAMPLES_LANGCHAIN_A2A_BUYER__AMPERSEND_API_URL`: ampersend API URL (defaults to sandbox)
+- `EXAMPLES_LANGCHAIN_A2A_BUYER__SELLER_URL`: Remote A2A agent URL (defaults to sandbox)
 - `OPENAI_API_KEY`: Your OpenAI API key
 
 ## Run

@@ -4,7 +4,7 @@ This example demonstrates using LangChain agents with x402-enabled A2A agents
 and ampersend for payment authorization with spend limits.
 
 Getting Started (Testnet):
-    1. Create agent account at https://app.staging.ampersend.ai
+    1. Create agent account at https://app.sandbox.ampersend.ai
     2. Fund with testnet USDC: https://faucet.circle.com/ (Base Sepolia)
     3. Set environment variables:
         export EXAMPLES_LANGCHAIN_A2A_BUYER__SMART_ACCOUNT_ADDRESS=0x...
@@ -18,9 +18,9 @@ Environment Variables:
     EXAMPLES_LANGCHAIN_A2A_BUYER__SMART_ACCOUNT_ADDRESS: Agent smart account address (from dashboard)
     EXAMPLES_LANGCHAIN_A2A_BUYER__SESSION_KEY_PRIVATE_KEY: Session key (from dashboard)
     EXAMPLES_LANGCHAIN_A2A_BUYER__AMPERSEND_API_URL: ampersend API URL
-        Default: https://api.staging.ampersend.ai
+        Default: https://api.sandbox.ampersend.ai
     EXAMPLES_LANGCHAIN_A2A_BUYER__SELLER_URL: Remote A2A agent URL
-        Default: https://subgraph-a2a.x402.staging.thegraph.com
+        Default: https://subgraph-a2a.x402.sandbox.thegraph.com
     OPENAI_API_KEY: OpenAI API key
 """
 
@@ -39,11 +39,11 @@ SMART_ACCOUNT_ADDRESS = os.environ.get(
 SESSION_KEY = os.environ.get("EXAMPLES_LANGCHAIN_A2A_BUYER__SESSION_KEY_PRIVATE_KEY")
 AMPERSEND_API_URL = os.environ.get(
     "EXAMPLES_LANGCHAIN_A2A_BUYER__AMPERSEND_API_URL",
-    "https://api.staging.ampersend.ai",
+    "https://api.sandbox.ampersend.ai",
 )
 SELLER_URL = os.environ.get(
     "EXAMPLES_LANGCHAIN_A2A_BUYER__SELLER_URL",
-    "https://subgraph-a2a.x402.staging.thegraph.com",
+    "https://subgraph-a2a.x402.sandbox.thegraph.com",
 )
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 
